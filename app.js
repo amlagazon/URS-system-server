@@ -20,10 +20,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const db = require("./models");
 const User = db.user;
 
+db.sequelize.query("SET FOREIGN_KEY_CHECKS = 0");
 db.sequelize.sync({ force: true }).then(() => {
   console.log("Drop and Resync Db");
   initial();
 });
+db.sequelize.query("SET FOREIGN_KEY_CHECKS = 1");
 
 function initial() {
   User.create({
