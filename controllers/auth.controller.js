@@ -2,21 +2,32 @@ const db = require("../models");
 const config = require("../config/auth.config");
 const User = db.user;
 const UserType = db.userType;
+const Student = db.student;
+const Evaluator = db.evaluator;
 const Op = db.Sequelize.Op;
 
 var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
 
 exports.getall = (req, res) => {
-  var join = [];
+  var join = [{ model: Student }, { model: UserType }, { model: Evaluator }];
   if (req.query.type != undefined) {
     join.push({ model: UserType, where: { type: req.query.type } });
   }
-  console.log(req.query);
   User.findAll({
     include: join,
   })
     .then((users) => {
+      if (req.query.program_id != undefined) {
+        users = users.filter((user) => {
+          switch (user.user_type.type) {
+            case "student":
+              return user.student.program_id == req.query.program_id;
+            case "evaluator":
+              return user.evaluator.program_id == req.query.program_id;
+          }
+        });
+      }
       res.send({ success: true, users });
     })
     .catch((err) => {

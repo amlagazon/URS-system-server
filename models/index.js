@@ -31,13 +31,12 @@ db.studentSubject = require("./student.subjects.js")(sequelize, Sequelize);
 
 db.userType.hasMany(db.user, { foreignKey: "user_type_id" });
 db.user.belongsTo(db.userType, { foreignKey: "user_type_id" });
+db.user.belongsTo(db.student, { foreignKey: "student_id" });
+db.user.belongsTo(db.admin, { foreignKey: "admin_id" });
+db.user.belongsTo(db.evaluator, { foreignKey: "evaluator_id" });
 
-db.admin.belongsTo(db.user, { foreignKey: "user_id" });
-
-db.evaluator.belongsTo(db.user, { foreignKey: "user_id" });
 db.evaluator.belongsTo(db.program, { foreignKey: "program_id" });
 
-db.student.belongsTo(db.user, { foreignKey: "user_id" });
 db.student.belongsTo(db.program, { foreignKey: "program_id" });
 db.student.hasMany(db.studentSubject, { foreignKey: "student_id" });
 
