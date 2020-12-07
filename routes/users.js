@@ -6,6 +6,8 @@ const { verifySignUp } = require("../middleware");
 /* GET users listing. */
 router.get("/", controller.getall);
 
+router.get("/:id", controller.getOne);
+
 router.post(
   "/auth/signup",
   verifySignUp.checkDuplicateUsernameOrEmail,

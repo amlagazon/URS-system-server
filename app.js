@@ -18,23 +18,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = require("./models");
-const User = db.user;
+const userTypesSeed = require("./seed/user_types.js");
+const userSeed = require("./seed/users.js");
 
 db.sequelize.query("SET FOREIGN_KEY_CHECKS = 0");
 db.sequelize.sync({ force: true }).then(() => {
+  userTypesSeed.initializeUserTypes();
+  userSeed.initializeUsers();
   console.log("Drop and Resync Db");
-  initial();
 });
 db.sequelize.query("SET FOREIGN_KEY_CHECKS = 1");
 
-function initial() {
-  User.create({
-    id: 1,
-    username: "test_user",
-    email: "sample_test@yahoo.com",
-    password: "12345678_test",
-  });
-}
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");

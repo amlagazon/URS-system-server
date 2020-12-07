@@ -1,15 +1,32 @@
 const db = require("../models");
 const config = require("../config/auth.config");
 const User = db.user;
+const UserType = db.userType;
 const Op = db.Sequelize.Op;
 
 var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
 
 exports.getall = (req, res) => {
-  User.findAll()
+  var join = [];
+  if (req.query.type != undefined) {
+    join.push({ model: UserType, where: { type: req.query.type } });
+  }
+  console.log(req.query);
+  User.findAll({
+    include: join,
+  })
     .then((users) => {
       res.send({ success: true, users });
+    })
+    .catch((err) => {
+      res.status(500).send({ message: err.message });
+    });
+};
+exports.getOne = (req, res) => {
+  User.findOne({ where: { id: req.params.id } })
+    .then((user) => {
+      res.send({ success: true, user });
     })
     .catch((err) => {
       res.status(500).send({ message: err.message });
