@@ -20,11 +20,21 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const db = require("./models");
 const userTypesSeed = require("./seed/user_types.js");
 const userSeed = require("./seed/users.js");
+const programsSeed = require("./seed/programs.js");
+const semestersSeed = require("./seed/semesters.js");
+
+
+const programs = require("./models/programs");
 
 db.sequelize.query("SET FOREIGN_KEY_CHECKS = 0");
 db.sequelize.sync({ force: true }).then(() => {
   userTypesSeed.initializeUserTypes();
   userSeed.initializeUsers();
+  semestersSeed.initializeSemesters()
+  programsSeed.initializePrograms();
+
+
+  programs
   console.log("Drop and Resync Db");
 });
 db.sequelize.query("SET FOREIGN_KEY_CHECKS = 1");

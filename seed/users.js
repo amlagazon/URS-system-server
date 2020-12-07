@@ -10,11 +10,13 @@ function initializeUsers() {
     email: "aaron.louie@gmail.com",
     password: "12345678",
     user_type_id: 1,
+    program_id: 1
   });
   User.create({
     email: "jose.rizal@gmail.com",
     password: "12345678",
     user_type_id: 2,
+    program_id: 1
   });
 }
 
