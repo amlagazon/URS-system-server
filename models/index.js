@@ -54,13 +54,13 @@ db.semester.hasMany(db.program, { foreignKey: "semester_id" });
 
 db.programCourse.belongsToMany(db.subject, {
   through: "program_course_subjects",
-  as: "program_courses",
+  as: "subjects",
   foreignKey: "program_course_id",
 });
 
 db.subject.belongsToMany(db.programCourse, {
   through: "program_course_subjects",
-  as: "subjects",
+  as: "program_courses",
   foreignKey: "subject_id",
 });
 

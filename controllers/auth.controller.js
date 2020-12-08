@@ -35,7 +35,8 @@ exports.getall = (req, res) => {
     });
 };
 exports.getOne = (req, res) => {
-  User.findOne({ where: { id: req.params.id } })
+  var join = [{ model: Student }, { model: UserType }, { model: Evaluator }];
+  User.findOne({ where: { id: req.params.id }, include: join })
     .then((user) => {
       res.send({ success: true, user });
     })

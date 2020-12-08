@@ -2,14 +2,19 @@ const db = require("./../models");
 const User = db.user;
 const Student = db.student;
 const Evaluator = db.evaluator;
-function initializeUsers() {
-  User.create({
-    frst_name: "Admin",
-    last_name: "User",
-    email: "admin@urs.edu.ph",
-    password: "12345678",
-    user_type_id: 3,
-  });
+const Admin = db.admin;
+async function seed() {
+  User.create(
+    {
+      frst_name: "Admin",
+      last_name: "User",
+      email: "admin@urs.edu.ph",
+      password: "12345678",
+      user_type_id: 3,
+      admin: {},
+    },
+    { include: { model: Admin } }
+  );
   User.create(
     {
       frst_name: "Aaron Louie",
@@ -34,4 +39,4 @@ function initializeUsers() {
   );
 }
 
-module.exports.initializeUsers = initializeUsers;
+module.exports.seed = seed;

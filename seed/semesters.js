@@ -1,15 +1,15 @@
 const db = require("./../models");
 const Semester = db.semester;
 
-function initializeSemesters() {
+function seed() {
   Semester.create({
-    school_year: '2020-2021',
-    semester: 1
+    school_year: "2020-2021",
+    semester: 1,
   });
   Semester.create({
-    school_year: '2020-2021',
-    semester: 2
+    school_year: "2020-2021",
+    semester: 2,
   });
 }
 
-module.exports.initializeSemesters = initializeSemesters;
+module.exports.seed = seed;

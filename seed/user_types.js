@@ -1,7 +1,7 @@
 const db = require("./../models");
 const UserType = db.userType;
 
-function initializeUserTypes() {
+function seed() {
   UserType.create({
     type: "student",
   });
@@ -13,4 +13,4 @@ function initializeUserTypes() {
   });
 }
 
-module.exports.initializeUserTypes = initializeUserTypes;
+module.exports.seed = seed;
