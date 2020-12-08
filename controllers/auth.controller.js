@@ -64,7 +64,6 @@ exports.signup = (req, res) => {
 };
 
 exports.signin = (req, res) => {
-  console.log("signin");
   User.findOne({
     where: {
       email: req.body.user.email,
@@ -77,10 +76,7 @@ exports.signin = (req, res) => {
       if (!user) {
         return res.status(404).send({ message: "User Not found." });
       }
-      console.log("passswooord");
 
-      console.log(req.body.user.password);
-      console.log(user.password);
       var passwordIsValid = bcrypt.compareSync(
         req.body.user.password,
         user.password
@@ -105,8 +101,6 @@ exports.signin = (req, res) => {
       });
     })
     .catch((err) => {
-      console.log(err);
-      console.log("hatdog");
       res.status(500).send({ message: err.message });
     });
 };

@@ -2,7 +2,7 @@ const db = require("../models");
 const Subject = db.subject;
 const Program = db.program;
 const ProgramCourse = db.programCourse;
-// GET /api/subjects?program_id={program_id}&&year_level={year_level}&&semester={semester}
+
 exports.getall = (req, res) => {
   let where = {};
   if (req.query.semester) {

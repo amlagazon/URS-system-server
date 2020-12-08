@@ -14,6 +14,6 @@ router.post(
   controller.signup
 );
 
-router.post("/auth/signin", verifySignUp.checkSignin, controller.signin);
+router.post("/auth/signin", controller.signin);
 
 module.exports = router;
