@@ -7,6 +7,8 @@ var logger = require("morgan");
 var usersRouter = require("./routes/users");
 var subjectsRouter = require("./routes/subjects");
 var semestersRouter = require("./routes/semesters");
+var studentSubjectsRouter = require("./routes/student_subjects");
+
 var cors = require("cors");
 const bodyParser = require("body-parser");
 
@@ -41,6 +43,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/api/users", usersRouter);
 app.use("/api/subjects", subjectsRouter);
 app.use("/api/semesters", semestersRouter);
+app.use("/api/students/subjects", studentSubjectsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
