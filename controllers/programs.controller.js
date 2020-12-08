@@ -22,7 +22,13 @@ exports.getall = (req, res) => {
 exports.getOne = (req, res) => {
   Program.findOne({ where: { id: req.params.id } })
     .then((program) => {
-      res.send({ success: true, program });
+      if(program){
+        res.send({ success: true, program });
+      } else{
+        res.status(400).send({
+          message: "Failed! Program not found!",
+        });
+      }
     })
     .catch((err) => {
       res.status(500).send({ message: err.message });
@@ -39,7 +45,14 @@ exports.updateOne = (req, res) => {
     { where: { id: req.params.id } }
   )
     .then(function (rowsUpdated) {
-      res.json(rowsUpdated);
+      if (rowsUpdated[0] != 0){
+        res.send({ success: true });
+      } else{
+        res.status(400).send({
+          message: "Failed to update program",
+        });
+      }
+      
     })
     .catch((err) => {
       res.status(500).send({ message: err.message });

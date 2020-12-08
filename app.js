@@ -8,6 +8,7 @@ var usersRouter = require("./routes/users");
 var programsRouter = require("./routes/programs");
 var subjectsRouter = require("./routes/subjects");
 var semestersRouter = require("./routes/semesters");
+var evaluatorsRouter = require("./routes/evaluators");
 var cors = require("cors");
 const bodyParser = require("body-parser");
 
@@ -43,6 +44,7 @@ app.use("/api/users", usersRouter);
 app.use("/api/programs", programsRouter);
 app.use("/api/subjects", subjectsRouter);
 app.use("/api/semesters", semestersRouter);
+app.use("/api/evaluators", evaluatorsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

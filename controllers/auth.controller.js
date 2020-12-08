@@ -148,3 +148,17 @@ exports.signin = (req, res) => {
       res.status(500).send({ message: err.message });
     });
 };
+
+exports.deleteOne = (req, res) => {
+  User.destroy({ where: { id: req.params.id } })
+    .then((user) => {
+      if (user){
+        res.send({ success: true });
+      } else{
+        res.status(400).send({ message: 'Failed to destroy user'})
+      }
+    })
+    .catch((err) => {
+      res.status(500).send({ message: err.message });
+    });
+};
