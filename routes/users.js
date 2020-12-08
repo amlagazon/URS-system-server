@@ -8,12 +8,14 @@ router.get("/", controller.getall);
 
 router.get("/:id", controller.getOne);
 
+router.put("/:id", controller.update);
+
 router.post(
   "/auth/signup",
   verifySignUp.checkDuplicateUsernameOrEmail,
   controller.signup
 );
 
-router.post("/auth/signin", verifySignUp.checkSignin, controller.signin);
+router.post("/auth/signin", controller.signin);
 
 module.exports = router;

@@ -34,8 +34,52 @@ exports.getall = (req, res) => {
       res.status(500).send({ message: err.message });
     });
 };
+
+exports.update = (req, res) => {
+  var join = [{ model: Student }, { model: UserType }, { model: Evaluator }];
+  let payload = req.body.user;
+  console.log(req.body);
+  if (!payload)
+    res.status(400).send({
+      message: "Failed! No payload found!",
+    });
+  User.findOne({ where: { id: req.params.id }, include: join }).then((user) => {
+    if (user) {
+      user.update(payload).then((user) => {
+        if (payload.extras) {
+          switch (user.user_type.type) {
+            case "student":
+              user.student.update(payload.extras).then((student) => {
+                res.send({
+                  success: true,
+                  message: "Student was modified!",
+                  user,
+                });
+              });
+              break;
+            case "evaluator":
+              user.evaluator.update(payload.extras).then((evaluator) => {
+                res.send({
+                  success: true,
+                  message: "Evaluator was modified!",
+                  user,
+                });
+              });
+              break;
+          }
+        }
+      });
+    } else {
+      res.status(400).send({
+        message: "Failed! User not found!",
+      });
+    }
+  });
+};
+
 exports.getOne = (req, res) => {
-  User.findOne({ where: { id: req.params.id } })
+  var join = [{ model: Student }, { model: UserType }, { model: Evaluator }];
+  User.findOne({ where: { id: req.params.id }, include: join })
     .then((user) => {
       res.send({ success: true, user });
     })
@@ -43,6 +87,7 @@ exports.getOne = (req, res) => {
       res.status(500).send({ message: err.message });
     });
 };
+
 exports.signup = (req, res) => {
   // Save User to Database
   console.log("SIGNUP");
@@ -63,7 +108,6 @@ exports.signup = (req, res) => {
 };
 
 exports.signin = (req, res) => {
-  console.log("signin");
   User.findOne({
     where: {
       email: req.body.user.email,
@@ -76,10 +120,7 @@ exports.signin = (req, res) => {
       if (!user) {
         return res.status(404).send({ message: "User Not found." });
       }
-      console.log("passswooord");
 
-      console.log(req.body.user.password);
-      console.log(user.password);
       var passwordIsValid = bcrypt.compareSync(
         req.body.user.password,
         user.password
@@ -104,8 +145,6 @@ exports.signin = (req, res) => {
       });
     })
     .catch((err) => {
-      console.log(err);
-      console.log("hatdog");
       res.status(500).send({ message: err.message });
     });
 };

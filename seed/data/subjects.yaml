@@ -1,0 +1,43 @@
+- year_level: 1
+  semester: 1
+  display_name: "Calculus 1 (Differential Calculus)"
+  code: "MATH 2E"
+  units: 3
+  program_courses:
+    - ee
+    - ce
+- year_level: 1
+  semester: 1
+  display_name: "Chemistry for Engineers"
+  code: "ENGG CHEM"
+  units: 4
+  program_courses:
+    - ee
+- year_level: 1
+  semester: 1
+  display_name: "Mathematics in the Modern World"
+  code: "MATH 1"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 1
+  semester: 1
+  display_name: "Computer Aided Drafting"
+  code: "CAD"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 1
+  semester: 2
+  display_name: "Calculus 2 (Integral Calculus)"
+  code: "MATH 3E"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 1
+  semester: 2
+  display_name: "Physics for Engineers"
+  code: "PHYS 1E"
+  units: 3
+  program_courses:
+    - ee

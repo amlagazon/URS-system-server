@@ -37,30 +37,32 @@ db.user.belongsTo(db.evaluator, { foreignKey: "evaluator_id" });
 
 db.evaluator.belongsTo(db.program, { foreignKey: "program_id" });
 
-db.student.belongsTo(db.program, { foreignKey: "program_id" });
+db.student.belongsTo(db.programCourse, { foreignKey: "program_course_id" });
 db.student.hasMany(db.studentSubject, { foreignKey: "student_id" });
 
 db.program.hasMany(db.evaluator, { foreignKey: "program_id" });
-db.program.hasMany(db.student, { foreignKey: "program_id" });
-db.program.belongsTo(db.semester, { foreignKey: "semester_id" });
-db.program.belongsTo(db.programCourse, { foreignKey: "program_course_id" });
+db.program.hasOne(db.semester, { foreignKey: "program_id" });
 
 db.studentSubject.belongsTo(db.semester, { foreignKey: "semester_id" });
 db.studentSubject.belongsTo(db.student, { foreignKey: "student_id" });
 db.studentSubject.belongsTo(db.subject, { foreignKey: "subject_id" });
 
 db.semester.hasMany(db.studentSubject, { foreignKey: "semester_id" });
-db.semester.hasMany(db.program, { foreignKey: "semester_id" });
+
+db.programCourse.belongsTo(db.program, { foreignKey: "program_id" });
+db.programCourse.hasMany(db.student, { foreignKey: "program_course_id" });
+
+db.subject.belongsTo(db.program, { foreignKey: "program_id" });
 
 db.programCourse.belongsToMany(db.subject, {
   through: "program_course_subjects",
-  as: "program_courses",
+  as: "subjects",
   foreignKey: "program_course_id",
 });
 
 db.subject.belongsToMany(db.programCourse, {
   through: "program_course_subjects",
-  as: "subjects",
+  as: "program_courses",
   foreignKey: "subject_id",
 });
 

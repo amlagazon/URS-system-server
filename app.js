@@ -6,6 +6,8 @@ var logger = require("morgan");
 
 var usersRouter = require("./routes/users");
 var programsRouter = require("./routes/programs");
+var subjectsRouter = require("./routes/subjects");
+var semestersRouter = require("./routes/semesters");
 var cors = require("cors");
 const bodyParser = require("body-parser");
 
@@ -19,26 +21,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = require("./models");
-const userTypesSeed = require("./seed/user_types.js");
-const userSeed = require("./seed/users.js");
-const programsSeed = require("./seed/programs.js");
-const semestersSeed = require("./seed/semesters.js");
+const data = require("./seed");
 
-
-const programs = require("./models/programs");
-
-db.sequelize.query("SET FOREIGN_KEY_CHECKS = 0");
+db.sequelize.query("SET GLOBAL FOREIGN_KEY_CHECKS = 0");
 db.sequelize.sync({ force: true }).then(() => {
-  userTypesSeed.initializeUserTypes();
-  userSeed.initializeUsers();
-  semestersSeed.initializeSemesters()
-  programsSeed.initializePrograms();
-
-
-  programs
+  data.seed();
   console.log("Drop and Resync Db");
 });
-db.sequelize.query("SET FOREIGN_KEY_CHECKS = 1");
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -52,6 +41,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api/users", usersRouter);
 app.use("/api/programs", programsRouter);
+app.use("/api/subjects", subjectsRouter);
+app.use("/api/semesters", semestersRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
