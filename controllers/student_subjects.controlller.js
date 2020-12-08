@@ -19,6 +19,16 @@ exports.getall = (req, res) => {
     res.send({ success: true, student_subjects: studentSubjects });
   });
 };
+
+exports.edit = (req, res) => {
+  StudentSubject.update(req.body, {
+    where: { id: req.params.student_subject_id },
+    include: { model: Student, where: { id: req.params.student_id } },
+  }).then((success) => {
+    res.send({ success: !!success[0] });
+  });
+};
+
 exports.addStudentSubjects = (req, res) => {
   var join = [
     { model: Student, where: { id: req.params.student_id } },

@@ -6,4 +6,6 @@ router.post("/:student_id", controller.addStudentSubjects);
 
 router.get("/:student_id", controller.getall);
 
+router.put("/:student_id/:student_subject_id", controller.edit);
+
 module.exports = router;
