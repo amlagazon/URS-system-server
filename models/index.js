@@ -55,7 +55,7 @@ db.semester.hasMany(db.studentSubject, { foreignKey: "semester_id" });
 db.programCourse.belongsTo(db.program, { foreignKey: "program_id" });
 db.programCourse.hasMany(db.student, { foreignKey: "program_course_id" });
 
-db.subject.belongsTo(db.program, { foreignKey: "program_id" });
+// db.subject.belongsTo(db.program, { foreignKey: "program_id" });
 
 db.programCourse.belongsToMany(db.subject, {
   through: "program_course_subjects",
