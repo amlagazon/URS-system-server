@@ -29,6 +29,17 @@ exports.edit = (req, res) => {
   });
 };
 
+exports.delete = (req, res) => {
+  StudentSubject.destroy({
+    where: {
+      id: req.params.student_subject_id,
+      student_id: req.params.student_id,
+    },
+  }).then((success) => {
+    res.send({ success: !!success });
+  });
+};
+
 exports.addStudentSubjects = (req, res) => {
   var join = [
     { model: Student, where: { id: req.params.student_id } },

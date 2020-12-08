@@ -8,4 +8,6 @@ router.get("/:student_id", controller.getall);
 
 router.put("/:student_id/:student_subject_id", controller.edit);
 
+router.delete("/:student_id/:student_subject_id", controller.delete);
+
 module.exports = router;
