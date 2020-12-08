@@ -8,6 +8,7 @@ const Op = db.Sequelize.Op;
 
 var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
+const e = require("express");
 
 exports.getall = (req, res) => {
   Program.findAll()
@@ -44,8 +45,8 @@ exports.updateOne = (req, res) => {
     },
     { where: { id: req.params.id } }
   )
-    .then(function (rowsUpdated) {
-      if (rowsUpdated[0] != 0){
+    .then(function (success) {
+      if (!!success[0]){
         res.send({ success: true });
       } else{
         res.status(400).send({
@@ -59,21 +60,8 @@ exports.updateOne = (req, res) => {
     });
 };
 
-// Foo.findAll({
-//   include: [{
-//       model: Bar,
-//       required: true,
-//       through: {
-//               where: {
-//                   BarId: {[Sequelize.Op.eq]: wineBar.id }
-//               }
-//           }
-//       }
-//   ]
-// });
 
 exports.getSemesters = (req, res) => {
-  console.log(Sequalize.col('semester_id'))
   Program.findOne({
     where: { id: req.params.id },
     include: [{
@@ -83,6 +71,25 @@ exports.getSemesters = (req, res) => {
   })
     .then((program) => {
       res.send({ success: true, program });
+    })
+    .catch((err) => {
+      res.status(500).send({ message: err.message });
+    });
+};
+
+exports.updateSemester = (req, res) => {
+  Program.update(
+    {
+      semester_id: req.body.semester_id
+    },
+    { where: { id: req.params.id } }
+  )
+    .then((success) => {
+      if (!!success[0]){
+        res.status(200).send({ success: true})
+      } else{
+        res.status(400).send({ message: 'Update failed'})
+      }
     })
     .catch((err) => {
       res.status(500).send({ message: err.message });
