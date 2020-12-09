@@ -8,6 +8,7 @@ var usersRouter = require("./routes/users");
 var programsRouter = require("./routes/programs");
 var subjectsRouter = require("./routes/subjects");
 var semestersRouter = require("./routes/semesters");
+var studentsRouter = require("./routes/students");
 var studentSubjectsRouter = require("./routes/student_subjects");
 var evaluatorsRouter = require("./routes/evaluators");
 var cors = require("cors");
@@ -45,6 +46,7 @@ app.use("/api/users", usersRouter);
 app.use("/api/programs", programsRouter);
 app.use("/api/subjects", subjectsRouter);
 app.use("/api/semesters", semestersRouter);
+app.use("/api/students/profile", studentsRouter);
 app.use("/api/students/subjects", studentSubjectsRouter);
 app.use("/api/evaluators", evaluatorsRouter);
 

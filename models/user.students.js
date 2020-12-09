@@ -20,7 +20,7 @@ module.exports = (sequelize, Sequelize) => {
     date_admission: {
       type: Sequelize.DATE,
     },
-    rate_of_record: {
+    rating_file: {
       type: Sequelize.STRING,
     },
     year_level: {
@@ -30,7 +30,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING,
     },
     subject_status: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.STRING,
     }
   });
 
