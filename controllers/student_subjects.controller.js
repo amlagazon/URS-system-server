@@ -45,12 +45,29 @@ exports.submitSubjects = (req, res) => {
     where: {
       id: req.params.student_id,
     },
+    include: { model: StudentSubject },
   }).then((student) => {
     if (!student)
       res.status(500).send({ success: false, message: "No student found" });
-    student.update({ subject_status: "pending" }).then((updatedStudent) => {
-      res.send({ success: true });
-    });
+    let student_subjects = student.get({ plain: true }).student_subjects;
+    if (
+      student_subjects.length == 0 ||
+      student_subjects.filter(
+        (student_subject) =>
+          student_subject.grade == null || student_subject.grade == 0
+      ).length > 0
+    ) {
+      res
+        .status(500)
+        .send({
+          success: false,
+          message: "Please complete your subjects and grades",
+        });
+    } else {
+      student.update({ subject_status: "pending" }).then((updatedStudent) => {
+        res.send({ success: true });
+      });
+    }
   });
 };
 
@@ -81,7 +98,6 @@ exports.addStudentSubjects = (req, res) => {
               return;
             }
             StudentSubject.create({
-              grade: 0,
               subject_id: subject.id,
               student_id: user.student.id,
               semester_id: semester.dataValues.id,

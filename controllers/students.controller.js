@@ -41,6 +41,7 @@ exports.submitProfile = (req, res) => {
         missing_attributes,
         message: "Incomplete student profile",
       });
+      return;
     }
     student.update({ status: "pending" }).then((updatedStudent) => {
       res.send({ success: true });
