@@ -7,14 +7,17 @@ var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
 
 exports.approveProfile = (req, res) => {
-  Student.findOne({ where: { id: req.params.student_id } })
-    .then((student) => {
-      if(student){
-        student.update({ status: "approved"})
-        res.send({ success: true, student });
-      } else{
+  Student.update(
+    { status: "approved" },
+    { where: { id: req.params.student_id } }
+  )
+    .then((success) => {
+      console.log('adasd' + success)
+      if (!!success[0]) {
+        res.send({ success: true });
+      } else {
         res.status(400).send({
-          message: "Failed! Student not found!",
+          message: "Failed! Update failed.",
         });
       }
     })
@@ -24,14 +27,16 @@ exports.approveProfile = (req, res) => {
 };
 
 exports.rejectProfile = (req, res) => {
-  Student.findOne({ where: { id: req.params.student_id } })
-    .then((student) => {
-      if(student){
-        student.update({ status: "rejected"})
-        res.send({ success: true, student });
-      } else{
+  Student.update(
+    { status: "rejected" },
+    { where: { id: req.params.student_id } }
+  )
+    .then((success) => {
+      if (!!success[0]) {
+        res.send({ success: true });
+      } else {
         res.status(400).send({
-          message: "Failed! Student not found!",
+          message: "Failed! Update failed.",
         });
       }
     })
@@ -41,14 +46,16 @@ exports.rejectProfile = (req, res) => {
 };
 
 exports.approveSubjects = (req, res) => {
-  Student.findOne({ where: { id: req.params.student_id } })
-    .then((student) => {
-      if(student){
-        student.update({ subject_status: "approved"})
+  Student.update(
+    { subject_status: "approved" },
+    { where: { id: req.params.student_id } }
+  )
+    .then((success) => {
+      if (!!success[0]) {
         res.send({ success: true, student });
-      } else{
+      } else {
         res.status(400).send({
-          message: "Failed! Student not found!",
+          message: "Failed! Update failed.",
         });
       }
     })
@@ -58,14 +65,16 @@ exports.approveSubjects = (req, res) => {
 };
 
 exports.rejectSubjects = (req, res) => {
-  Student.findOne({ where: { id: req.params.student_id } })
-    .then((student) => {
-      if(student){
-        student.update({ subject_status: "rejected"})
+  Student.update(
+    { subject_status: "rejected" },
+    { where: { id: req.params.student_id } }
+  )
+    .then((success) => {
+      if (!!success[0]) {
         res.send({ success: true, student });
-      } else{
+      } else {
         res.status(400).send({
-          message: "Failed! Student not found!",
+          message: "Failed! Update failed",
         });
       }
     })

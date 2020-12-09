@@ -12,6 +12,6 @@ router.get("/:id", controller.getOne);
 // get specific program
 router.put("/:id", controller.updateOne);
 
-router.get("/:id/semesters", controller.getSemesters);
+router.post("/:id/semester", controller.updateSemester);
 
 module.exports = router;

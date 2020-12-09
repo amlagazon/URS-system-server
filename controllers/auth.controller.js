@@ -151,8 +151,8 @@ exports.signin = (req, res) => {
 
 exports.deleteOne = (req, res) => {
   User.destroy({ where: { id: req.params.id } })
-    .then((user) => {
-      if (user){
+    .then((success) => {
+      if (success){
         res.send({ success: true });
       } else{
         res.status(400).send({ message: 'Failed to destroy user'})
