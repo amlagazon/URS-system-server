@@ -10,4 +10,6 @@ router.put("/:student_id/:student_subject_id", controller.edit);
 
 router.delete("/:student_id/:student_subject_id", controller.delete);
 
+router.post("/:student_id/profile/submit", controller.submit);
+
 module.exports = router;

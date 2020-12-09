@@ -40,6 +40,18 @@ exports.delete = (req, res) => {
   });
 };
 
+exports.submit = (req, res) => {
+  Student.findOne({
+    where: { id: req.params.student_id },
+  }).then((student) => {
+    if (!student)
+      res.status(500).send({ success: false, message: "No student found" });
+    student.update({ status: "pending" }).then((updatedStudent) => {
+      res.send({ success: true });
+    });
+  });
+};
+
 exports.addStudentSubjects = (req, res) => {
   var join = [
     { model: Student, where: { id: req.params.student_id } },
