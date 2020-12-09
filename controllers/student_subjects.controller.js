@@ -57,12 +57,10 @@ exports.submitSubjects = (req, res) => {
           student_subject.grade == null || student_subject.grade == 0
       ).length > 0
     ) {
-      res
-        .status(500)
-        .send({
-          success: false,
-          message: "Please complete your subjects and grades",
-        });
+      res.status(500).send({
+        success: false,
+        message: "Please complete your subjects and grades",
+      });
     } else {
       student.update({ subject_status: "pending" }).then((updatedStudent) => {
         res.send({ success: true });
@@ -73,7 +71,11 @@ exports.submitSubjects = (req, res) => {
 
 exports.addStudentSubjects = (req, res) => {
   var join = [
-    { model: Student, where: { id: req.params.student_id } },
+    {
+      model: Student,
+      where: { id: req.params.student_id },
+      include: { model: StudentSubject, include: { model: Subject } },
+    },
     { model: UserType, where: { type: "student" } },
   ];
   Semester.findOne({ include: { model: Program, where: { id: 1 } } }).then(
@@ -87,31 +89,43 @@ exports.addStudentSubjects = (req, res) => {
           res
             .status(500)
             .send({ success: false, message: "Student not found" });
-        if (!req.body.subject_codes)
+        if (!req.query.subject_code)
           res
             .status(500)
-            .send({ success: false, message: "Please put subject codes" });
-        req.body.subject_codes.map((code) => {
-          Subject.findOne({ where: { code } }).then((subject) => {
+            .send({ success: false, message: "Please put subject code" });
+        Subject.findOne({ where: { code: req.query.subject_code } }).then(
+          (subject) => {
             if (!subject) {
-              console.log(`Error subject code: ${code}`);
+              res.status(500).send({
+                success: false,
+                message: "Subject not found",
+              });
               return;
             }
-            StudentSubject.create({
-              subject_id: subject.id,
-              student_id: user.student.id,
-              semester_id: semester.dataValues.id,
-            }).then(() => {
-              console.log(
-                `Succesfully added subject with subject code: ${code} to student: ${user.email}`
-              );
+            user.student.student_subjects.map((studentSubject) => {
+              if (studentSubject.subject.code == req.query.subject_code) {
+                res.status(500).send({
+                  success: false,
+                  message: "Subject is already being taken",
+                });
+                return;
+              }
             });
-          });
-        });
-        res.send({
-          success: true,
-          message: "Subjects has been added to the student.",
-        });
+            if (!res._headerSent)
+              StudentSubject.create({
+                subject_id: subject.id,
+                student_id: user.student.id,
+                semester_id: semester.dataValues.id,
+              }).then((studentSubject) => {
+                res.send({
+                  success: true,
+                  student_subject: studentSubject,
+                  subject,
+                  message: "Subjects has been added to the student.",
+                });
+              });
+          }
+        );
       });
     }
   );
