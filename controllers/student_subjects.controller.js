@@ -8,14 +8,11 @@ const Program = db.program;
 const Semester = db.semester;
 
 exports.getall = (req, res) => {
-  let join = [{ model: Subject }];
+  let where = { student_id: req.params.student_id };
   if (req.query.semester_id) {
-    join.push({ model: Semester, where: { id: req.query.semester_id } });
+    where.semester_id = req.query.semester_id;
   }
-  StudentSubject.findAll({
-    where: { student_id: req.params.student_id },
-    include: join,
-  }).then((studentSubjects) => {
+  StudentSubject.findAll({ where }).then((studentSubjects) => {
     res.send({ success: true, student_subjects: studentSubjects });
   });
 };
@@ -66,6 +63,37 @@ exports.submitSubjects = (req, res) => {
         res.send({ success: true });
       });
     }
+  });
+};
+
+exports.computeGWA = (req, res) => {
+  StudentSubject.findAll({
+    raw: true,
+    nest: true,
+    where: {
+      student_id: req.params.student_id,
+      semester_id: req.params.semester_id,
+    },
+    include: { model: Subject },
+  }).then((studentSubjects) => {
+    if (studentSubjects.length == 0) {
+      res.status(500).send({
+        success: false,
+        message: "Student has no subjects in this sem",
+      });
+      return;
+    }
+    var totalGrades = 0;
+    var totalUnits = 0;
+    studentSubjects.map((studentSubject) => {
+      var units = studentSubject.subject.units;
+      totalGrades += studentSubject.grade * units;
+      totalUnits += units;
+    });
+    res.send({
+      success: true,
+      gwa: totalGrades / totalUnits,
+    });
   });
 };
 

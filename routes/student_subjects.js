@@ -12,4 +12,6 @@ router.delete("/:student_id/:student_subject_id", controller.delete);
 
 router.post("/:student_id/submit", controller.submitSubjects);
 
+router.get("/:student_id/:semester_id/compute_gwa", controller.computeGWA);
+
 module.exports = router;
