@@ -6,7 +6,7 @@ const Admin = db.admin;
 async function seed() {
   User.create(
     {
-      frst_name: "Admin",
+      first_name: "Admin",
       last_name: "User",
       email: "admin@urs.edu.ph",
       password: "12345678",
@@ -17,18 +17,41 @@ async function seed() {
   );
   User.create(
     {
-      frst_name: "Aaron Louie",
+      first_name: "Aaron Louie",
       last_name: "Lagazon",
       email: "aaron.louie@gmail.com",
       password: "12345678",
       user_type_id: 1,
-      student: { gwa: 1.2, student_number: "123456", program_id: 1 },
+      student: {
+        gwa: 1.2,
+        student_number: "123456",
+        program_id: 1,
+        status: "approved",
+        subject_status: "pending"
+      },
     },
     { include: { model: Student } }
   );
   User.create(
     {
-      frst_name: "Jose",
+      first_name: "Maureen",
+      last_name: "Batacan",
+      email: "mau.b@gmail.com",
+      password: "11111",
+      user_type_id: 1,
+      student: {
+        gwa: 1.2,
+        student_number: "123456",
+        program_id: 1,
+        status: "rejected",
+        subject_status: "rejected"
+      },
+    },
+    { include: { model: Student } }
+  );
+  User.create(
+    {
+      first_name: "Jose",
       last_name: "Rizal",
       email: "jose.rizal@gmail.com",
       password: "12345678",

@@ -28,9 +28,15 @@ module.exports = (sequelize, Sequelize) => {
     },
     status: {
       type: Sequelize.STRING,
+      defaultValue: 'pending'
     },
     subject_status: {
+      type: Sequelize.STRING,
+      defaultValue: 'pending'
+    },
+    number_of_subjects: {
       type: Sequelize.INTEGER,
+      defaultValue: 0
     }
   });
 

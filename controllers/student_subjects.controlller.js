@@ -76,6 +76,14 @@ exports.addStudentSubjects = (req, res) => {
                 `Succesfully added subject with subject code: ${code} to student: ${user.email}`
               );
             });
+            
+            user.student.update({
+              number_of_subjects: user.student.number_of_subjects + 1
+            }).then(() => {
+              console.log(
+                `Student number_of_subjects: ` + user.student.number_of_subjects
+              );
+            });
           });
         });
         res.send({
