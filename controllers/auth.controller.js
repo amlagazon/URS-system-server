@@ -143,6 +143,13 @@ exports.signin = (req, res) => {
         email: user.email,
         accessToken: token,
       });
+      
+      global.io.sockets.emit("login", {
+        id: user.id,
+        username: user.username,
+        email: user.email,
+        accessToken: token,
+      });
     })
     .catch((err) => {
       res.status(500).send({ message: err.message });
@@ -152,10 +159,10 @@ exports.signin = (req, res) => {
 exports.deleteOne = (req, res) => {
   User.destroy({ where: { id: req.params.id } })
     .then((success) => {
-      if (success){
+      if (success) {
         res.send({ success: true });
-      } else{
-        res.status(400).send({ message: 'Failed to destroy user'})
+      } else {
+        res.status(400).send({ message: "Failed to destroy user" });
       }
     })
     .catch((err) => {
