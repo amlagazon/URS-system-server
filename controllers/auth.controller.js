@@ -116,6 +116,7 @@ exports.signin = (req, res) => {
     where: {
       email: req.body.user.email,
     },
+    include: [{ model: Student }, { model: UserType }],
   })
     .then((user) => {
       console.log("hello");
@@ -146,6 +147,7 @@ exports.signin = (req, res) => {
         username: user.username,
         email: user.email,
         accessToken: token,
+        user,
       });
 
       global.io.sockets.emit("login", {
