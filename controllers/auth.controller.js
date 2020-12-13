@@ -93,7 +93,8 @@ exports.signup = (req, res) => {
   console.log("SIGNUP");
   console.log(req.body);
   User.create({
-    username: req.body.user.username,
+    first_name: req.body.user.first_name,
+    last_name: req.body.user.last_name,
     email: req.body.user.email,
     password: bcrypt.hashSync(req.body.user.password, 8),
   })
@@ -143,7 +144,7 @@ exports.signin = (req, res) => {
         email: user.email,
         accessToken: token,
       });
-      
+
       global.io.sockets.emit("login", {
         id: user.id,
         username: user.username,
