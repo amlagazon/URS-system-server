@@ -107,7 +107,10 @@ exports.signup = (req, res) => {
       res.status(500).send({ message: err.message });
     });
 };
-
+exports.signout = (req, res) => {
+  // jwt.sign({ id: user.id }, config.secret);
+  global.io.sockets.emit("signout");
+};
 exports.signin = (req, res) => {
   User.findOne({
     where: {

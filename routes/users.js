@@ -18,6 +18,8 @@ router.post(
 
 router.post("/auth/signin", controller.signin);
 
+router.post("/auth/signout", controller.signout);
+
 router.delete("/:id", controller.deleteOne);
 
 module.exports = router;
