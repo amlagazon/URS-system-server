@@ -12,9 +12,12 @@ exports.getall = (req, res) => {
   if (req.query.semester_id) {
     where.semester_id = req.query.semester_id;
   }
-  StudentSubject.findAll({ where }).then((studentSubjects) => {
-    res.send({ success: true, student_subjects: studentSubjects });
-  });
+  StudentSubject.findAll({ where, include: { model: Subject } }).then(
+    (studentSubjects) => {
+      console.log(studentSubjects);
+      res.send({ success: true, student_subjects: studentSubjects });
+    }
+  );
 };
 
 exports.edit = (req, res) => {
@@ -117,7 +120,7 @@ exports.addStudentSubjects = (req, res) => {
           res
             .status(500)
             .send({ success: false, message: "Student not found" });
-        if (!req.query.subject_code)
+        if (!req.query.subject_code || req.query.subject_code == undefined)
           res
             .status(500)
             .send({ success: false, message: "Please put subject code" });
@@ -145,6 +148,10 @@ exports.addStudentSubjects = (req, res) => {
                 student_id: user.student.id,
                 semester_id: semester.dataValues.id,
               }).then((studentSubject) => {
+                global.io.sockets.emit("add_student_subject", {
+                  studentSubject,
+                  subject,
+                });
                 res.send({
                   success: true,
                   student_subject: studentSubject,

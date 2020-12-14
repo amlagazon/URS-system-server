@@ -28,16 +28,16 @@ module.exports = (sequelize, Sequelize) => {
     },
     status: {
       type: Sequelize.STRING,
-      defaultValue: 'pending'
+      defaultValue: "to_submit",
     },
     subject_status: {
       type: Sequelize.STRING,
-      defaultValue: 'pending'
+      defaultValue: "to_submit",
     },
     number_of_subjects: {
       type: Sequelize.INTEGER,
-      defaultValue: 0
-    }
+      defaultValue: 0,
+    },
   });
 
   return Student;

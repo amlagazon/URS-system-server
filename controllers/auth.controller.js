@@ -90,22 +90,30 @@ exports.getOne = (req, res) => {
 
 exports.signup = (req, res) => {
   // Save User to Database
-  console.log("SIGNUP");
-  console.log(req.body);
-  User.create({
-    first_name: req.body.user.first_name,
-    last_name: req.body.user.last_name,
-    email: req.body.user.email,
-    password: bcrypt.hashSync(req.body.user.password, 8),
-  })
-    .then((user) => {
-      console.log(user);
-      res.send({ message: "User was registered successfully!" });
-    })
-    .catch((err) => {
-      console.log("error - " + err);
-      res.status(500).send({ message: err.message });
-    });
+  UserType.findOne({ type: "student" }).then((userType) => {
+    if (!userType)
+      return res.status(404).send({ message: "Student user type not found" });
+
+    User.create(
+      {
+        first_name: req.body.user.first_name,
+        last_name: req.body.user.last_name,
+        email: req.body.user.email,
+        password: bcrypt.hashSync(req.body.user.password, 8),
+        user_type_id: userType.id,
+        student: { gwa: 0, program_course_id: 1 },
+      },
+      { include: { model: Student, as: "student" } }
+    )
+      .then((user) => {
+        console.log(user);
+        res.send({ message: "User was registered successfully!" });
+      })
+      .catch((err) => {
+        console.log("error - " + err);
+        res.status(500).send({ message: err.message });
+      });
+  });
 };
 exports.signout = (req, res) => {
   // jwt.sign({ id: user.id }, config.secret);
