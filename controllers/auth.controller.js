@@ -4,6 +4,7 @@ const User = db.user;
 const UserType = db.userType;
 const Student = db.student;
 const Evaluator = db.evaluator;
+const ProgramCourse = db.programCourse;
 const Op = db.Sequelize.Op;
 
 var jwt = require("jsonwebtoken");
@@ -93,26 +94,31 @@ exports.signup = (req, res) => {
   UserType.findOne({ type: "student" }).then((userType) => {
     if (!userType)
       return res.status(404).send({ message: "Student user type not found" });
-
-    User.create(
-      {
-        first_name: req.body.user.first_name,
-        last_name: req.body.user.last_name,
-        email: req.body.user.email,
-        password: bcrypt.hashSync(req.body.user.password, 8),
-        user_type_id: userType.id,
-        student: { gwa: 0, program_course_id: 1 },
-      },
-      { include: { model: Student, as: "student" } }
-    )
-      .then((user) => {
-        console.log(user);
-        res.send({ message: "User was registered successfully!" });
-      })
-      .catch((err) => {
-        console.log("error - " + err);
-        res.status(500).send({ message: err.message });
-      });
+    ProgramCourse.findOne({
+      where: { name: req.body.user.program_course },
+    }).then((programCourse) => {
+      if (!programCourse)
+        return res.status(404).send({ message: "Program course not found" });
+      User.create(
+        {
+          first_name: req.body.user.first_name,
+          last_name: req.body.user.last_name,
+          email: req.body.user.email,
+          password: bcrypt.hashSync(req.body.user.password, 8),
+          user_type_id: userType.id,
+          student: { gwa: 0, program_course_id: programCourse.id },
+        },
+        { include: { model: Student, as: "student" } }
+      )
+        .then((user) => {
+          console.log(user);
+          res.send({ message: "User was registered successfully!" });
+        })
+        .catch((err) => {
+          console.log("error - " + err);
+          res.status(500).send({ message: err.message });
+        });
+    });
   });
 };
 exports.signout = (req, res) => {
