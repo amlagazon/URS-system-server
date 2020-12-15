@@ -36,6 +36,7 @@ exports.delete = (req, res) => {
       student_id: req.params.student_id,
     },
   }).then((success) => {
+    global.io.emit("delete_student_subject");
     res.send({ success: !!success });
   });
 };
