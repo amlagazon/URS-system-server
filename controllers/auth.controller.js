@@ -5,27 +5,39 @@ const UserType = db.userType;
 const Student = db.student;
 const Evaluator = db.evaluator;
 const ProgramCourse = db.programCourse;
+const Program = db.program;
 const Op = db.Sequelize.Op;
 
 var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
 
 exports.getall = (req, res) => {
-  var join = [{ model: Student }, { model: UserType }, { model: Evaluator }];
-  if (req.query.type != undefined) {
+  var join = [
+    { model: Student },
+    { model: UserType },
+    {
+      model: Evaluator,
+      include: { model: ProgramCourse },
+    },
+  ];
+  if (req.query.type) {
     join.push({ model: UserType, where: { type: req.query.type } });
   }
   User.findAll({
     include: join,
   })
     .then((users) => {
-      if (req.query.program_id != undefined) {
+      if (req.query.program_course_id) {
         users = users.filter((user) => {
           switch (user.user_type.type) {
             case "student":
-              return user.student.program_id == req.query.program_id;
+              return (
+                user.student.program_course_id == req.query.program_course_id
+              );
             case "evaluator":
-              return user.evaluator.program_id == req.query.program_id;
+              return (
+                user.evaluator.program_course_id == req.query.program_course_id
+              );
           }
         });
       }
