@@ -37,7 +37,11 @@ exports.getall = (req, res) => {
 };
 
 exports.update = (req, res) => {
-  var join = [{ model: Student }, { model: UserType }, { model: Evaluator }];
+  var join = [
+    { model: Student, include: { model: ProgramCourse } },
+    { model: UserType },
+    { model: Evaluator },
+  ];
   let payload = req.body.user;
   console.log(req.body);
   if (!payload)
@@ -51,6 +55,7 @@ exports.update = (req, res) => {
           switch (user.user_type.type) {
             case "student":
               user.student.update(payload.extras).then((student) => {
+                global.io.emit("user_update", user);
                 res.send({
                   success: true,
                   message: "Student was modified!",
@@ -60,6 +65,7 @@ exports.update = (req, res) => {
               break;
             case "evaluator":
               user.evaluator.update(payload.extras).then((evaluator) => {
+                global.io.emit("user_update", user);
                 res.send({
                   success: true,
                   message: "Evaluator was modified!",
