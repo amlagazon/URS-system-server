@@ -57,7 +57,29 @@ async function seed() {
       email: "jose.rizal@gmail.com",
       password: bcrypt.hashSync("12345678", 8),
       user_type_id: 2,
-      evaluator: { program_id: 1 },
+      evaluator: { program_id: 1, program_course_id: 1 },
+    },
+    { include: { model: Evaluator } }
+  );
+  User.create(
+    {
+      first_name: "Jireh",
+      last_name: "Lim",
+      email: "jireh.lim@gmail.com",
+      password: bcrypt.hashSync("12345678", 8),
+      user_type_id: 2,
+      evaluator: { program_id: 1, program_course_id: 1 },
+    },
+    { include: { model: Evaluator } }
+  );
+  User.create(
+    {
+      first_name: "Justin",
+      last_name: "KJieber",
+      email: "jireh.lim@gmail.com",
+      password: bcrypt.hashSync("12345678", 8),
+      user_type_id: 2,
+      evaluator: { program_id: 1, program_course_id: 2 },
     },
     { include: { model: Evaluator } }
   );

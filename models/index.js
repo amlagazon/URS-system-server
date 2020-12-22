@@ -37,13 +37,14 @@ db.user.belongsTo(db.admin, { foreignKey: "admin_id" });
 db.user.belongsTo(db.evaluator, { foreignKey: "evaluator_id" });
 
 db.evaluator.hasOne(db.user, { foreignKey: "evaluator_id" });
-db.evaluator.belongsTo(db.program, { foreignKey: "program_id" });
+// db.evaluator.belongsTo(db.program, { foreignKey: "program_id" });
+db.evaluator.belongsTo(db.programCourse, { foreignKey: "program_course_id" });
 
 db.student.belongsTo(db.programCourse, { foreignKey: "program_course_id" });
 db.student.hasMany(db.studentSubject, { foreignKey: "student_id" });
 db.student.hasOne(db.user, { foreignKey: "student_id" });
 
-db.program.hasMany(db.evaluator, { foreignKey: "program_id" });
+// db.program.hasMany(db.evaluator, { foreignKey: "program_id" });
 db.semester.hasOne(db.program, { foreignKey: "semester_id" });
 db.program.belongsTo(db.semester, { foreignKey: "semester_id" });
 
@@ -55,6 +56,7 @@ db.semester.hasMany(db.studentSubject, { foreignKey: "semester_id" });
 
 db.programCourse.belongsTo(db.program, { foreignKey: "program_id" });
 db.programCourse.hasMany(db.student, { foreignKey: "program_course_id" });
+db.programCourse.hasMany(db.evaluator, { foreignKey: "program_course_id" });
 
 // db.subject.belongsTo(db.program, { foreignKey: "program_id" });
 

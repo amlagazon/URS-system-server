@@ -1,6 +1,10 @@
-coe:
+cpe:
   display_name: Computer Engineering
 ce:
   display_name: Civil Engineering
 ee:
   display_name: Electrical Engineering
+me:
+  display_name: Mechanical Engineering
+ece:
+  display_name: Electronics and Communications Engineering
