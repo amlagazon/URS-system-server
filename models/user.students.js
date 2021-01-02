@@ -12,13 +12,13 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING,
     },
     birthday: {
-      type: Sequelize.DATE,
+      type: Sequelize.DATEONLY,
     },
     address: {
       type: Sequelize.STRING,
     },
     date_admission: {
-      type: Sequelize.DATE,
+      type: Sequelize.DATEONLY,
     },
     rating_file: {
       type: Sequelize.STRING,

@@ -148,7 +148,11 @@ exports.signin = (req, res) => {
     where: {
       email: req.body.user.email,
     },
-    include: [{ model: Student }, { model: UserType }],
+    include: [
+      { model: Evaluator, include: { model: ProgramCourse } },
+      { model: Student, include: { model: ProgramCourse } },
+      { model: UserType }
+    ],
   })
     .then((user) => {
       console.log("hello");
