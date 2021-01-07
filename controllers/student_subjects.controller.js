@@ -91,8 +91,11 @@ exports.computeGWA = (req, res) => {
     var totalUnits = 0;
     studentSubjects.map((studentSubject) => {
       var units = studentSubject.subject.units;
-      totalGrades += studentSubject.grade * units;
-      totalUnits += units;
+      var subjectGrade = parseFloat(studentSubject.grade)
+      if(!isNaN(subjectGrade)){
+        totalGrades += subjectGrade * units;
+        totalUnits += units;
+      }
     });
     res.send({
       success: true,

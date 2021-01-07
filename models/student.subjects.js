@@ -6,7 +6,7 @@ module.exports = (sequelize, Sequelize) => {
       autoIncrement: true,
     },
     grade: {
-      type: Sequelize.DECIMAL(10,2),
+      type: Sequelize.STRING,
     }
   });
 

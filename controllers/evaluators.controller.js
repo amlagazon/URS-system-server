@@ -52,7 +52,11 @@ exports.approveSubjects = (req, res) => {
   )
     .then((success) => {
       if (!!success[0]) {
-        res.send({ success: true, student });
+        res.send({ success: true });
+        global.io.emit("update_student_attr", {
+          attr: "subject_status",
+          value: "approved"
+        })
       } else {
         res.status(400).send({
           message: "Failed! Update failed.",
@@ -71,7 +75,11 @@ exports.rejectSubjects = (req, res) => {
   )
     .then((success) => {
       if (!!success[0]) {
-        res.send({ success: true, student });
+        res.send({ success: true });
+        global.io.emit("update_student_attr", {
+          attr: "subject_status",
+          value: "rejected"
+        })
       } else {
         res.status(400).send({
           message: "Failed! Update failed",
