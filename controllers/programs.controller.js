@@ -11,7 +11,7 @@ var bcrypt = require("bcryptjs");
 const e = require("express");
 
 exports.getall = (req, res) => {
-  Program.findAll()
+  Program.findAll({ include: { model: Semester } })
     .then((programs) => {
       res.send({ success: true, programs });
     })
@@ -21,11 +21,14 @@ exports.getall = (req, res) => {
 };
 
 exports.getOne = (req, res) => {
-  Program.findOne({ where: { id: req.params.id } })
+  Program.findOne({
+    where: { id: req.params.id },
+    include: { model: Semester },
+  })
     .then((program) => {
-      if(program){
+      if (program) {
         res.send({ success: true, program });
-      } else{
+      } else {
         res.status(400).send({
           message: "Failed! Program not found!",
         });
@@ -46,28 +49,28 @@ exports.updateOne = (req, res) => {
     { where: { id: req.params.id } }
   )
     .then(function (success) {
-      if (!!success[0]){
+      if (!!success[0]) {
         res.send({ success: true });
-      } else{
+      } else {
         res.status(400).send({
           message: "Failed to update program",
         });
       }
-      
     })
     .catch((err) => {
       res.status(500).send({ message: err.message });
     });
 };
 
-
 exports.getSemesters = (req, res) => {
   Program.findOne({
     where: { id: req.params.id },
-    include: [{
-      model: Semester,
-      where: { semesterId: Sequalize.col('semester.id') }
-    }]
+    include: [
+      {
+        model: Semester,
+        where: { semesterId: Sequalize.col("semester.id") },
+      },
+    ],
   })
     .then((program) => {
       res.send({ success: true, program });
@@ -80,15 +83,15 @@ exports.getSemesters = (req, res) => {
 exports.updateSemester = (req, res) => {
   Program.update(
     {
-      semester_id: req.body.semester_id
+      semester_id: req.body.semester_id,
     },
     { where: { id: req.params.id } }
   )
     .then((success) => {
-      if (!!success[0]){
-        res.status(200).send({ success: true})
-      } else{
-        res.status(400).send({ message: 'Update failed'})
+      if (!!success[0]) {
+        res.status(200).send({ success: true });
+      } else {
+        res.status(400).send({ message: "Update failed" });
       }
     })
     .catch((err) => {
