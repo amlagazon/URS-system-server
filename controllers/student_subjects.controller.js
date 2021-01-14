@@ -65,6 +65,10 @@ exports.submitSubjects = (req, res) => {
     } else {
       student.update({ subject_status: "pending" }).then((updatedStudent) => {
         res.send({ success: true });
+        global.io.emit("update_student_attr", {
+          attr: "subject_status",
+          value: "pending",
+        });
       });
     }
   });
@@ -91,8 +95,8 @@ exports.computeGWA = (req, res) => {
     var totalUnits = 0;
     studentSubjects.map((studentSubject) => {
       var units = studentSubject.subject.units;
-      var subjectGrade = parseFloat(studentSubject.grade)
-      if(!isNaN(subjectGrade)){
+      var subjectGrade = parseFloat(studentSubject.grade);
+      if (!isNaN(subjectGrade)) {
         totalGrades += subjectGrade * units;
         totalUnits += units;
       }
