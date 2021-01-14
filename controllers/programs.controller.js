@@ -45,6 +45,7 @@ exports.updateOne = (req, res) => {
     {
       school_name: req.body.school_name,
       college: req.body.college,
+      semester_id: req.body.semester_id,
     },
     { where: { id: req.params.id } }
   )
