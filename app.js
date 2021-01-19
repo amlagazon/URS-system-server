@@ -28,10 +28,15 @@ const db = require("./models");
 const data = require("./seed");
 
 db.sequelize.query("SET GLOBAL FOREIGN_KEY_CHECKS = 0");
-db.sequelize.sync({ force: true }).then(() => {
-  data.seed();
-  console.log("Drop and Resync Db");
-});
+db.sequelize
+  .sync({ force: true })
+  .then(() => {
+    data.seed();
+    console.log("Drop and Resync Db");
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
