@@ -4,33 +4,48 @@ const fs = require("fs");
 const Subject = db.subject;
 const ProgramCourse = db.programCourse;
 async function seed() {
-  initializeProgramCourses();
-  initializeSubjects();
+  try {
+    initializeProgramCourses();
+    initializeSubjects();
+  } catch (error) {
+    console.error(error);
+  }
+
 }
 async function initializeProgramCourses() {
-  let data = fs.readFileSync("./seed/data/program_courses.yaml", "utf8");
-  let data_loaded = yaml.safeLoad(data);
-  for (var key in data_loaded) {
-    ProgramCourse.create({
-      name: key,
-      display_name: data_loaded[key].display_name,
-    });
+  try {
+    let data = fs.readFileSync("./seed/data/program_courses.yaml", "utf8");
+    let data_loaded = yaml.safeLoad(data);
+    for (var key in data_loaded) {
+      ProgramCourse.create({
+        name: key,
+        display_name: data_loaded[key].display_name,
+      });
+    }
+  } catch (error) {
+    console.error(error);
   }
+
 }
 async function initializeSubjects() {
-  let data = fs.readFileSync("./seed/data/subjects.yaml", "utf8");
-  let data_loaded = yaml.safeLoad(data);
-  data_loaded.map((data) => {
-    Subject.create({
-      year_level: data.year_level,
-      semester: data.semester,
-      display_name: data.display_name,
-      code: data.code,
-      units: data.units,
-    }).then((subject) => {
-      addProgramCourseSubjects(data.program_courses, subject.id);
+  try {
+    let data = fs.readFileSync("./seed/data/subjects.yaml", "utf8");
+    let data_loaded = yaml.safeLoad(data);
+    data_loaded.map((data) => {
+      Subject.create({
+        year_level: data.year_level,
+        semester: data.semester,
+        display_name: data.display_name,
+        code: data.code,
+        units: data.units,
+      }).then((subject) => {
+        addProgramCourseSubjects(data.program_courses, subject.id);
+      });
     });
-  });
+  } catch (error) {
+    console.error(error);
+  }
+
 }
 function addProgramCourseSubjects(programCourseNames, subjectId) {
   return ProgramCourse.findAll({ where: { name: programCourseNames } })
