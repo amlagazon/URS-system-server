@@ -42,7 +42,7 @@ db.evaluator.belongsTo(db.programCourse, { foreignKey: "program_course_id", cons
 
 db.student.belongsTo(db.programCourse, { foreignKey: "program_course_id", constraints: false });
 db.student.hasMany(db.studentSubject, { foreignKey: "student_id", constraints: false  });
-db.student.hasOne(db.user, { foreignKey: "student_id" });
+db.student.hasOne(db.user, { foreignKey: "student_id", constraints: false });
 
 // db.program.hasMany(db.evaluator, { foreignKey: "program_id" });
 db.semester.hasOne(db.program, { foreignKey: "semester_id", constraints: false  });
