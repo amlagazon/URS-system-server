@@ -109,6 +109,7 @@ exports.getOne = (req, res) => {
 
 exports.signup = (req, res) => {
   // Save User to Database
+  console.log(req.body);
   const type = req.body.user.type;
   UserType.findOne({ where: { type } }).then((userType) => {
     if (!userType)
@@ -137,12 +138,17 @@ exports.signup = (req, res) => {
       User.create(user, {
         include: [
           { model: Student, as: "student" },
-          { model: Evaluator, as: "evaluator" },
+          {
+            model: Evaluator,
+            as: "evaluator",
+          },
         ],
       })
         .then((user) => {
-          console.log(user);
           res.send({ message: "User was registered successfully!" });
+          if (type == "evaluator") {
+            global.io.sockets.emit("update_evaluators", user);
+          }
         })
         .catch((err) => {
           console.log("error - " + err);
