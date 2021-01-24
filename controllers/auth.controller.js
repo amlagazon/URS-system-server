@@ -126,7 +126,11 @@ exports.signup = (req, res) => {
         user_type_id: userType.id,
       };
       if (type == "student") {
-        user.student = { gwa: 0, program_course_id: programCourse.id };
+        user.student = {
+          gwa: 0,
+          program_course_id: programCourse.id,
+          student_number: req.body.user.student_number,
+        };
       } else if (type == "evaluator") {
         user.evaluator = { program_course_id: programCourse.id };
       }
