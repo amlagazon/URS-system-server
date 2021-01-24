@@ -109,25 +109,33 @@ exports.getOne = (req, res) => {
 
 exports.signup = (req, res) => {
   // Save User to Database
-  UserType.findOne({ type: "student" }).then((userType) => {
+  const type = req.body.user.type;
+  UserType.findOne({ where: { type } }).then((userType) => {
     if (!userType)
-      return res.status(404).send({ message: "Student user type not found" });
+      return res.status(404).send({ message: "User type not found" });
     ProgramCourse.findOne({
       where: { name: req.body.user.program_course },
     }).then((programCourse) => {
       if (!programCourse)
         return res.status(404).send({ message: "Program course not found" });
-      User.create(
-        {
-          first_name: req.body.user.first_name,
-          last_name: req.body.user.last_name,
-          email: req.body.user.email,
-          password: bcrypt.hashSync(req.body.user.password, 8),
-          user_type_id: userType.id,
-          student: { gwa: 0, program_course_id: programCourse.id },
-        },
-        { include: { model: Student, as: "student" } }
-      )
+      var user = {
+        first_name: req.body.user.first_name,
+        last_name: req.body.user.last_name,
+        email: req.body.user.email,
+        password: bcrypt.hashSync(req.body.user.password, 8),
+        user_type_id: userType.id,
+      };
+      if (type == "student") {
+        user.student = { gwa: 0, program_course_id: programCourse.id };
+      } else if (type == "evaluator") {
+        user.evaluator = { program_course_id: programCourse.id };
+      }
+      User.create(user, {
+        include: [
+          { model: Student, as: "student" },
+          { model: Evaluator, as: "evaluator" },
+        ],
+      })
         .then((user) => {
           console.log(user);
           res.send({ message: "User was registered successfully!" });
@@ -151,7 +159,7 @@ exports.signin = (req, res) => {
     include: [
       { model: Evaluator, include: { model: ProgramCourse } },
       { model: Student, include: { model: ProgramCourse } },
-      { model: UserType }
+      { model: UserType },
     ],
   })
     .then((user) => {
