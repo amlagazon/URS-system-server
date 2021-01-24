@@ -15,6 +15,10 @@ exports.approveProfile = (req, res) => {
       console.log('adasd' + success)
       if (!!success[0]) {
         res.send({ success: true });
+        global.io.emit("update_student_attr", {
+          attr: "status",
+          value: "approved"
+        })
       } else {
         res.status(400).send({
           message: "Failed! Update failed.",
@@ -34,6 +38,10 @@ exports.rejectProfile = (req, res) => {
     .then((success) => {
       if (!!success[0]) {
         res.send({ success: true });
+        global.io.emit("update_student_attr", {
+          attr: "status",
+          value: "rejected"
+        })
       } else {
         res.status(400).send({
           message: "Failed! Update failed.",
