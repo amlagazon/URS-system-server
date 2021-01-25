@@ -52,7 +52,7 @@ exports.update = (req, res) => {
   var join = [
     { model: Student, include: { model: ProgramCourse } },
     { model: UserType },
-    { model: Evaluator },
+    { model: Evaluator, include: { model: ProgramCourse } },
   ];
   let payload = req.body.user;
   console.log(req.body);
