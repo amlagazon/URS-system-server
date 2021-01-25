@@ -29,7 +29,7 @@ const data = require("./seed");
 
 db.sequelize.query("SET GLOBAL FOREIGN_KEY_CHECKS = 0");
 db.sequelize
-  .sync({ force: true })
+  .sync({ force: false })
   .then(() => {
     data.seed();
     console.log("Drop and Resync Db");
