@@ -31,7 +31,6 @@ db.sequelize.query("SET GLOBAL FOREIGN_KEY_CHECKS = 0");
 db.sequelize
   .sync({ force: false })
   .then(() => {
-    data.seed();
     console.log("Drop and Resync Db");
   })
   .catch((error) => {
