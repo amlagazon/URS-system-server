@@ -41,3 +41,2588 @@
   units: 3
   program_courses:
     - ee
+- year_level: 1
+  semester: 1
+  display_name: "General Chemistry"
+  code: CHEM 1 
+  units: 5
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 1
+  display_name: "Drawing Fundamentals"
+  code: "DRAW 1"
+  units: 1
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 1
+  display_name: "College Algebra"
+  code: "MATH 1"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 1
+  display_name: "Plane and Spherical Trigonometry"
+  code: "MATH 2"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 2
+  display_name: "Study and Thinking Skills"
+  code: "ENG 1"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 1
+  display_name: "Komunikasyon sa Akademikong Filipino"
+  code: "FIL 1"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 1
+  display_name: "Arts Appreciation"
+  code: "HUM 1"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 1
+  display_name: "General Psychology"
+  code: "PSYCH 1"
+  units: 3 
+  program_courses:
+  - cpe
+  - ce
+- year_level: 1
+  semester: 1
+  display_name: "Physical Fitness"
+  code: "PE 1"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 1 
+  display_name: "National Service Training Program"
+  code: "NSTP 1"
+  units: 2
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 2
+  display_name: "Physics 1"
+  code: "PHYS 1"
+  units: 5
+  program_courses: 
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 2 
+  display_name: "Mechanical Drawing Fundamentals"
+  code: "DRAW 2E"
+  units: 1
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 2 
+  display_name: "Advance Algebra"
+  code: "MATH 9"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+- year_level: 1
+  semester: 2 
+  display_name: "Solid Geometry"
+  code: "MATH 11"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 2
+  display_name: "Analytic Geometry"
+  code: "MATH 13"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1 
+  semester: 2
+  display_name: "Writing in Discipline"
+  code: "ENG 2"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 2
+  display_name: "Philippine History"
+  code: "HISTORY 1"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 2
+  display_name: "Pagbasa at Pasulat Tungo sa Pananaliksik"
+  code: "FIL 2"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 2
+  display_name: "Rhytmic Activities"
+  code: "PE 2"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me  
+- year_level: 1
+  semester: 2
+  display_name: "National Service Training Program"
+  code: "NSTP 2"
+  units: 2
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 1
+  display_name: "Differential Calculus"
+  code: "MATH 14 "
+  units: 5
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 1 
+  display_name: "Physics 2"
+  code: "PHYS 2"
+  units: 5
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 1
+  display_name: "Speech Communication (technical Communication)"
+  code: "ENG 3A"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 1
+  display_name: "Applied Engineering Graphics (CpE)"
+  code: "DRAW 3E"
+  units: 1
+  program_courses:
+  - cpe
+- year_level: 2
+  semester: 1
+  display_name: "Computer Fundamentals and Programming"
+  code: "ES 1"
+  units: 4
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 1
+  display_name: "Philosophy of Man"
+  code: "HUM 2"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 1
+  display_name: "Politics and Governance with Phil. Constitution"
+  code: "SS 2"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 1
+  display_name: "Individual And Dual Sports"
+  code: "PE 3"
+  units: 2
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 2 
+  display_name: "Integral Calculus"
+  code: "MATH 15"
+  units: 5
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 2
+  display_name: "Probability And Statistics "
+  code: "MATH 32"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 2
+  display_name: "CAD 2D Fundamentals"
+  code: "DRAW 4"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 2
+  display_name: "Orientation to Computer Engineering"
+  code: "ENGG 0"
+  units: 1 
+  program_courses:
+  - cpe
+- year_level: 2
+  semester: 2
+  display_name: "Introduction to Biotechnology"
+  code: "BIOTECH"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 2
+  display_name: "Logic"
+  code: "HUM 4"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 2
+  display_name: "Basic Economics w/ Taxation & Agrarian Reform"
+  code: "SS 3"
+  units:
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me               
+- year_level: 2
+  semester: 2
+  display_name: "Life and Work of Rizal"
+  code:  "RIZAL"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me               
+- year_level: 2
+  semester: 2
+  display_name: "Team Sports/Games"
+  code: "PE 4"
+  units: 2
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me               
+- year_level: 3
+  semester: 1 
+  display_name: "Differential Equations"
+  code: "MATH 16E"
+  units: 3 
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me               
+- year_level: 3
+  semester: 1
+  display_name: "Data Structures And Algotrithms Analysis"
+  code: "CpE 2"
+  units: 4
+  program_courses:
+  - cpe              
+- year_level: 3
+  semester: 1
+  display_name: "Statics And Rigid Bodies"
+  code: "ES 2"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me               
+- year_level: 3
+  semester: 1
+  display_name: "Environmental Engineering"
+  code: "ES 4"
+  units: 3
+  program_courses:
+  - cpe
+  - ece
+  - me               
+- year_level: 3
+  semester: 1
+  display_name: "Electronic Devices And Ciruits"
+  code: "ECE 1"
+  units: 4
+  program_courses:
+  - cpe
+  - ee 
+  - ece             
+- year_level: 3
+  semester: 1
+  display_name: "Computer Engineering And Drafting Design"
+  code: "CpE 1"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 3
+  semester: 1
+  display_name: "Discrete Mathematics"
+  code: "MATH 27"
+  units: 3
+  program_courses:
+  - cpe
+  - ece
+- year_level: 3 
+  semester: 1
+  display_name: "Ciruits 1"
+  code: "EE 1"
+  units: 4
+  program_courses:
+  - cpe
+  - ee
+  - ece            
+- year_level: 3
+  semester: 2
+  display_name: "Advance Mathematics for CpE"
+  code: "MATH 28"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 3
+  semester: 2
+  display_name: "Object-Oriented Programming"
+  code: "CpE 3E"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 3
+  semester: 2
+  display_name: "Dynamics of Rigid Bodies"
+  code: "ES 3"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me               
+- year_level: 3
+  semester: 2 
+  display_name: "Mechanics of Deformable Bodies"
+  code: "ES 5"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me               
+- year_level: 3
+  semester: 2
+  display_name: "Engineering Management"
+  code: "ES 10"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ece
+  - me              
+- year_level: 3
+  semester: 2
+  display_name: "Electronic Circuit Analysis and Design"
+  code: "ECE 2E"
+  units: 4
+  program_courses:
+  - cpe
+  - ece 
+  - ee 
+- year_level: 3 
+  semester: 2
+  display_name: "Safety Management"
+  Code: "ES 12"
+  units: 2
+  program_courses:
+  - cpe
+  - ee
+  - me
+- year_level: 3
+  semester: 2
+  display_name: "Circuits 2"
+  code: "EE 3"
+  units: 4
+  program_courses:
+  - cpe
+  - ee
+  - ece               
+- year_level: 4
+  semester: 1
+  display_name: "System Analysis And Design"
+  code: "CpE 5"
+  units: 4
+  program_courses:
+  - cpe              
+- year_level: 4
+  semester: 1
+  display_name: "Comp. System Organization w/ Assy. Lang."
+  code: "CpE 5"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 4
+  semester: 1
+  display_name: "Principles of Communication"
+  code: "ECE 7"
+  units: 3
+  program_courses:
+  - cpe 
+  - ee             
+- year_level: 4
+  semester: 1
+  display_name: "Logic Circuits & Switching Theory"
+  code: "ECE 3"
+  units: 4
+  program_courses:
+  - cpe
+  - ee 
+  - ece              
+- year_level: 4 
+  semester: 1
+  display_name: "Control System"
+  code: "CpE 6"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 4
+  semester: 1
+  display_name: "Digital Signal Processing"
+  code: "CpE"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 4 
+  semester: 2
+  display_name: "Microprocessor System"
+  code: "CpE 9"
+  units: 4
+  program_courses:
+  - cpe              
+- year_level: 4 
+  semester: 2
+  display_name: "Structures of Programming Languages" 
+  code: "CpE 3E"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 4 
+  semester: 2
+  display_name: "Engineering Economy"
+  code: "ES 9"
+  units: 3
+  program_courses:
+  - cpe 
+  - ece              
+- year_level: 4
+  semester: 2
+  display_name: "Data Communications"
+  code: "CpE 6E"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 4  
+  semester: 2
+  display_name: "Computer System Architecture"
+  code: "CpE 7"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 4 
+  semester: 2
+  display_name: "Advance Logic Circuit" 
+  code: "CpE 8"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 4 
+  semester: 2
+  display_name: "Design Project 1(Method of Research)" 
+  code: "RES 1"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 5 
+  semester: 1
+  display_name: "Computer Hardware Fundamentals"
+  code: "CpE 17"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 5  
+  semester: 1
+  display_name: "Operating System"
+  code: "CpE 10"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 5
+  semester: 1
+  display_name: "Computer Networks"
+  code: "CpE 10"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 5 
+  semester: 1
+  display_name: "Software Engineering"
+  code: "CpE 15"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 5 
+  semester: 1
+  display_name: "Database Management System" 
+  code: "CpE 16"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 5 
+  semester: 1
+  display_name: "CpE Elective 1" 
+  code: "CpE EL 1"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 5 
+  semester: 1
+  display_name: "Design Project 2 (project implementation)"
+  code: "RES 2"
+  units: 2
+  program_courses:
+  - cpe               
+- year_level: 5
+  semester: 1
+  display_name: "Ethics,Contracts and Obligations"
+  code: "CpE 12"
+  units: 2
+  program_courses:
+  - cpe               
+- year_level: 5
+  semester: 2
+  display_name: "Management Information System"
+  code: "CpE 7E"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 5
+  semester: 2
+  display_name: "Entrepreneurship"
+  code: "ENTREP 1"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 5
+  semester: 2
+  display_name: "CoE Elective 1"
+  code: "CpE EL 2"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 5
+  semester: 2
+  display_name: "CoE Elective 3"
+  code: "CpE EL 3"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 5
+  semester: 2
+  display_name: "Seminars and Field Trips"
+  code: "CpE 13"
+  units: 2
+  program_courses:
+  - cpe               
+- year_level: 5
+  semester: 2
+  display_name: "CoE Professional Proficency Course /n (Pre-board Exam)"
+  code: "CpE 18"
+  units: 3
+  program_courses:
+  - cpe
+- year_level: 2 
+  semester: 2
+  display_name: "Orientation to Civil Engineering"
+  code: "ENGG 0"
+  units: 2
+  program_courses:
+    - ce
+- year_level: 2
+  semester: 1
+  display_name: "Applied Engineering Graphics"
+  code: "DRAW 3"
+  units: 1
+  program_courses:
+    - ce  
+- year_level: 3 
+  semester: 1
+  display_name: "CE Shop Theory & Practice"
+  code: "CE SHOP"
+  units: 3
+  program_courses:
+    - ce
+- year_level: 3 
+  semester: 1
+  display_name: "Basic Construction And Estimating"
+  code: "CE 2"
+  units: 3
+  program_courses:
+    - ce          
+- year_level: 3 
+  semester: 1
+  display_name: "Elementary Surveying"
+  code: "CE 1"
+  units: 5
+  program_courses:
+    - ce 
+- year_level: 3 
+  semester: 1 
+  display_name: "Advance CAD-3D"
+  code: "ES 8"
+  units: 3
+  program_courses:
+    - ce  
+- year_level: 3 
+  semester: 1 
+  display_name: "Basic Mechanical Engineering"
+  code: "ME 20"
+  units: 3
+  program_courses:
+    - ce     
+- year_level: 3 
+  semester: 2
+  display_name: "Basic Electrical Engineering"
+  code: "EE 10"
+  units: 3
+  program_courses:
+    - ce  
+- year_level: 3
+  semester: 2
+  display_name: "Engineering Geology"
+  code: "CE 3"
+  units: 3
+  program_courses:
+    - ce  
+- year_level: 3 
+  semester: 2
+  display_name: "Higher Surveying"
+  code: "CE 4"
+  units: 4
+  program_courses:
+    - ce  
+- year_level: 3 
+  semester: 2
+  display_name: "Fluid Mechanics"
+  code: "ES 6"
+  units: 3
+  program_courses:
+    - ce  
+- year_level: 3 
+  semester: 2
+  display_name: "Advance Mathematics for CE"
+  code: "MATH 28"
+  units: 3
+  program_courses:
+    - ce  
+- year_level: 4
+  semester: 1
+  display_name: "Construction Materials & Testing"
+  code: "CE 5"
+  units: 4
+  program_courses:
+    - ce  
+- year_level: 4 
+  semester: 1
+  display_name: "Building Design"
+  code: "CE 24"
+  units: 3
+  program_courses:
+    - ce  
+- year_level: 4 
+  semester: 1
+  display_name: "Engineering/Route Survey"
+  code: "CE 7"
+  units: 4
+  program_courses:
+    - ce  
+- year_level: 4 
+  semester: 1
+  display_name: "Geotechnical Engineering 1 (Soil Mechanics)"
+  code: "CE8"
+  units: 4
+  program_courses:
+    - ce  
+- year_level: 4
+  semester: 1
+  display_name: "Strucural Theory"
+  code: "CE 9"
+  units: 3
+  program_courses:
+    - ce         
+- year_level: 4 
+  semester: 1
+  display_name: "Hydrology"
+  code: "CE 12"
+  units: 3
+  program_courses:
+    - ce  
+- year_level: 4 
+  semester: 1
+  display_name: "Numerical Methods"
+  code: "ES 29E"
+  units: 3
+  program_courses:
+    - ce  
+- year_level: 4 
+  semester: 2
+  display_name: "Geotechnical Engineering 2 (Foundation Engg.)"
+  code: "CE 19"
+  units: 4
+  program_courses:
+    - ce                    
+- year_level: 4 
+  semester: 2
+  display_name: "Hydraulics"
+  code: "CE 6"
+  units: 4
+  program_courses:
+    - ce  
+- year_level: 4 
+  semester: 2
+  display_name: "Highway Engineering"
+  code: "CE 11"
+  units: 3
+- year_level: 4 
+  semester: 2
+  display_name: "Strucural Theory 2"
+  code: "CE 13"
+  units: 5
+  program_courses:
+    - ce
+- year_level: 4 
+  semester: 2
+  display_name: "Building Design 2"
+  code: "CE 25"
+  units: 2
+  program_courses:
+    - ce
+- year_level: 4 
+  semester: 2
+  display_name: "CE Proj Study/Res 1 (Methods of Research)"
+  code: "RES 1"
+  units: 3
+  program_courses:
+    - ce
+- year_level: 5
+  semester: 1
+  display_name: "Strucural Design 1 - Reinforced Concrete" 
+  code: "CE 14"
+  units: 6
+  program_courses:
+    - ce       
+- year_level: 5 
+  semester: 1
+  display_name: "Strucural Design 2 - Steel"
+  code: "CE 15"
+  units: 5
+  program_courses:
+    - ce
+- year_level: 5
+  semester: 1
+  display_name: "Strucural Design 3 - Timber"
+  code: "CE 16"
+  units: 3
+  program_courses:
+    - ce
+- year_level: 5 
+  semester: 1
+  display_name: "Earthquake Engineering"
+  code: "CE 10"
+  units: 3
+  program_courses:
+    - ce
+- year_level: 5
+  semester: 1
+  display_name: "CE LAws,Contract,Specs & Ethics"
+  code: "CE 17"
+  units: 3
+  program_courses:
+    - ce
+- year_level: 5  
+  semester: 1
+  display_name: "CE Elective course 1"
+  code: "CE EL 1"
+  units: 3
+  program_courses:
+    - ce               
+- year_level: 5  
+  semester: 1
+  display_name: "CE Proj Study/Res 2 (Project Implementation)"
+  code: "RES 2"
+  units: 2
+  program_courses:
+    - ce
+- year_level: 5
+  semester: 2 
+  display_name: "CE Seminars,Field Trips and Plant Visits"
+  code: "CE 23"
+  units: 1 
+  program_courses:
+    - ce
+- year_level: 5
+  semester: 2
+  display_name: "Cons't Methods & Project Management"
+  code: "CE 18"
+  units: 4
+  program_courses:
+    - ce
+- year_level: 5 
+  semester: 2
+  display_name: "CE Elective Course 2"
+  code: "CE EL 2"
+  units: 3
+  program_courses:
+    - ce
+- year_level: 5 
+  semester: 2
+  display_name: "CE Elective 3"
+  code: "CE EL 3"
+  units: 3
+  program_courses:
+    - ce   
+- year_level: 5 
+  semester: 2
+  display_name: "CE Elective 4"
+  code: "CE EL 4"
+  units: 3
+  program_courses:
+    - ce
+- year_level: 5  
+  semester: 2
+  display_name: "Transportation Engineering"
+  code: "CE 20"
+  units: 3
+  program_courses:
+    - ce
+- year_level: 5  
+  semester: 2
+  display_name: "Water Resource Engineering"
+  code: "CE 21"
+  units: 3
+  program_courses:
+    - ce
+- year_level: 5
+  semester: 2
+  display_name: "CE Professional Proficiency Development"
+  code: "CE 22"
+  units: 3
+  program_courses:
+    - ce
+- year_level: 3 
+  semester: 1
+  display_name: "Safety Management"
+  Code: "ES 12"
+  units: 2
+  program_courses:
+    - ce
+- year_level: 4
+  semester: 2
+  display_name: "Environmental Engineering"
+  code: "ES 4"
+  units: 3
+  program_courses:
+    - ce  
+- year_level: 4 
+  semester: 1
+  display_name: "Engineering Economy"
+  code: "ES 9"
+  units: 3
+  program_courses:
+    - cpe 
+    - ece              
+- year_level: 1
+  semester: 1
+  display_name: "General Chemistry"
+  code: CHEM 1 
+  units: 5
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 1
+  display_name: "Drawing Fundamentals"
+  code: "DRAW 1"
+  units: 1
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 1
+  display_name: "College Algebra"
+  code: "MATH 1"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 1
+  display_name: "Plane and Spherical Trigonometry"
+  code: "MATH 2"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 2
+  display_name: "Study and Thinking Skills"
+  code: "ENG 1"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 1
+  display_name: "Komunikasyon sa Akademikong Filipino"
+  code: "FIL 1"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 1
+  display_name: "Arts Appreciation"
+  code: "HUM 1"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 1
+  display_name: "General Psychology"
+  code: "PSYCH 1"
+  units: 3 
+  program_courses:
+  - cpe
+  - ce
+- year_level: 1
+  semester: 1
+  display_name: "Physical Fitness"
+  code: "PE 1"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 1 
+  display_name: "National Service Training Program"
+  code: "NSTP 1"
+  units: 2
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 2
+  display_name: "Physics 1"
+  code: "PHYS 1"
+  units: 5
+  program_courses: 
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 2 
+  display_name: "Mechanical Drawing Fundamentals"
+  code: "DRAW 2E"
+  units: 1
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 2 
+  display_name: "Advance Algebra"
+  code: "MATH 9"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+- year_level: 1
+  semester: 2 
+  display_name: "Solid Geometry"
+  code: "MATH 11"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 2
+  display_name: "Analytic Geometry"
+  code: "MATH 13"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1 
+  semester: 2
+  display_name: "Writing in Discipline"
+  code: "ENG 2"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 2
+  display_name: "Philippine History"
+  code: "HISTORY 1"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 2
+  display_name: "Pagbasa at Pasulat Tungo sa Pananaliksik"
+  code: "FIL 2"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 1
+  semester: 2
+  display_name: "Rhytmic Activities"
+  code: "PE 2"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me  
+- year_level: 1
+  semester: 2
+  display_name: "National Service Training Program"
+  code: "NSTP 2"
+  units: 2
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 1
+  display_name: "Differential Calculus"
+  code: "MATH 14 "
+  units: 5
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 1 
+  display_name: "Physics 2"
+  code: "PHYS 2"
+  units: 5
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 1
+  display_name: "Speech Communication (technical Communication)"
+  code: "ENG 3A"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 1
+  display_name: "Applied Engineering Graphics (CpE)"
+  code: "DRAW 3E"
+  units: 1
+  program_courses:
+  - cpe
+- year_level: 2
+  semester: 1
+  display_name: "Computer Fundamentals and Programming"
+  code: "ES 1"
+  units: 4
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 1
+  display_name: "Philosophy of Man"
+  code: "HUM 2"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 1
+  display_name: "Politics and Governance with Phil. Constitution"
+  code: "SS 2"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 1
+  display_name: "Individual And Dual Sports"
+  code: "PE 3"
+  units: 2
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 2 
+  display_name: "Integral Calculus"
+  code: "MATH 15"
+  units: 5
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 2
+  display_name: "Probability And Statistics "
+  code: "MATH 32"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 2
+  display_name: "CAD 2D Fundamentals"
+  code: "DRAW 4"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 2
+  display_name: "Orientation to Computer Engineering"
+  code: "ENGG 0"
+  units: 1 
+  program_courses:
+  - cpe
+- year_level: 2
+  semester: 2
+  display_name: "Introduction to Biotechnology"
+  code: "BIOTECH"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 2
+  display_name: "Logic"
+  code: "HUM 4"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me
+- year_level: 2
+  semester: 2
+  display_name: "Basic Economics w/ Taxation & Agrarian Reform"
+  code: "SS 3"
+  units:
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me               
+- year_level: 2
+  semester: 2
+  display_name: "Life and Work of Rizal"
+  code:  "RIZAL"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me               
+- year_level: 2
+  semester: 2
+  display_name: "Team Sports/Games"
+  code: "PE 4"
+  units: 2
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me               
+- year_level: 3
+  semester: 1 
+  display_name: "Differential Equations"
+  code: "MATH 16E"
+  units: 3 
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me               
+- year_level: 3
+  semester: 1
+  display_name: "Data Structures And Algotrithms Analysis"
+  code: "CpE 2"
+  units: 4
+  program_courses:
+  - cpe              
+- year_level: 3
+  semester: 1
+  display_name: "Statics And Rigid Bodies"
+  code: "ES 2"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me               
+- year_level: 3
+  semester: 1
+  display_name: "Environmental Engineering"
+  code: "ES 4"
+  units: 3
+  program_courses:
+  - cpe
+  - ece
+  - me               
+- year_level: 3
+  semester: 1
+  display_name: "Electronic Devices And Ciruits"
+  code: "ECE 1"
+  units: 4
+  program_courses:
+  - cpe
+  - ee 
+  - ece             
+- year_level: 3
+  semester: 1
+  display_name: "Computer Engineering And Drafting Design"
+  code: "CpE 1"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 3
+  semester: 1
+  display_name: "Discrete Mathematics"
+  code: "MATH 27"
+  units: 3
+  program_courses:
+  - cpe
+  - ece
+- year_level: 3 
+  semester: 1
+  display_name: "Ciruits 1"
+  code: "EE 1"
+  units: 4
+  program_courses:
+  - cpe
+  - ee
+  - ece            
+- year_level: 3
+  semester: 2
+  display_name: "Advance Mathematics for CpE"
+  code: "MATH 28"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 3
+  semester: 2
+  display_name: "Object-Oriented Programming"
+  code: "CpE 3E"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 3
+  semester: 2
+  display_name: "Dynamics of Rigid Bodies"
+  code: "ES 3"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me               
+- year_level: 3
+  semester: 2 
+  display_name: "Mechanics of Deformable Bodies"
+  code: "ES 5"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ee
+  - ece
+  - me               
+- year_level: 3
+  semester: 2
+  display_name: "Engineering Management"
+  code: "ES 10"
+  units: 3
+  program_courses:
+  - cpe
+  - ce
+  - ece
+  - me              
+- year_level: 3
+  semester: 2
+  display_name: "Electronic Circuit Analysis and Design"
+  code: "ECE 2E"
+  units: 4
+  program_courses:
+  - cpe
+  - ece 
+  - ee 
+- year_level: 3 
+  semester: 2
+  display_name: "Safety Management"
+  Code: "ES 12"
+  units: 2
+  program_courses:
+  - cpe
+  - ee
+  - me
+- year_level: 3
+  semester: 2
+  display_name: "Circuits 2"
+  code: "EE 3"
+  units: 4
+  program_courses:
+  - cpe
+  - ee
+  - ece               
+- year_level: 4
+  semester: 1
+  display_name: "System Analysis And Design"
+  code: "CpE 5"
+  units: 4
+  program_courses:
+  - cpe              
+- year_level: 4
+  semester: 1
+  display_name: "Comp. System Organization w/ Assy. Lang."
+  code: "CpE 5"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 4
+  semester: 1
+  display_name: "Principles of Communication"
+  code: "ECE 7"
+  units: 3
+  program_courses:
+  - cpe 
+  - ee             
+- year_level: 4
+  semester: 1
+  display_name: "Logic Circuits & Switching Theory"
+  code: "ECE 3"
+  units: 4
+  program_courses:
+  - cpe
+  - ee 
+  - ece              
+- year_level: 4 
+  semester: 1
+  display_name: "Control System"
+  code: "CpE 6"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 4
+  semester: 1
+  display_name: "Digital Signal Processing"
+  code: "CpE"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 4 
+  semester: 2
+  display_name: "Microprocessor System"
+  code: "CpE 9"
+  units: 4
+  program_courses:
+  - cpe              
+- year_level: 4 
+  semester: 2
+  display_name: "Structures of Programming Languages" 
+  code: "CpE 3E"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 4 
+  semester: 2
+  display_name: "Engineering Economy"
+  code: "ES 9"
+  units: 3
+  program_courses:
+  - cpe 
+  - ece              
+- year_level: 4
+  semester: 2
+  display_name: "Data Communications"
+  code: "CpE 6E"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 4  
+  semester: 2
+  display_name: "Computer System Architecture"
+  code: "CpE 7"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 4 
+  semester: 2
+  display_name: "Advance Logic Circuit" 
+  code: "CpE 8"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 4 
+  semester: 2
+  display_name: "Design Project 1(Method of Research)" 
+  code: "RES 1"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 5 
+  semester: 1
+  display_name: "Computer Hardware Fundamentals"
+  code: "CpE 17"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 5  
+  semester: 1
+  display_name: "Operating System"
+  code: "CpE 10"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 5
+  semester: 1
+  display_name: "Computer Networks"
+  code: "CpE 10"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 5 
+  semester: 1
+  display_name: "Software Engineering"
+  code: "CpE 15"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 5 
+  semester: 1
+  display_name: "Database Management System" 
+  code: "CpE 16"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 5 
+  semester: 1
+  display_name: "CpE Elective 1" 
+  code: "CpE EL 1"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 5 
+  semester: 1
+  display_name: "Design Project 2 (project implementation)"
+  code: "RES 2"
+  units: 2
+  program_courses:
+  - cpe               
+- year_level: 5
+  semester: 1
+  display_name: "Ethics,Contracts and Obligations"
+  code: "CpE 12"
+  units: 2
+  program_courses:
+  - cpe               
+- year_level: 5
+  semester: 2
+  display_name: "Management Information System"
+  code: "CpE 7E"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 5
+  semester: 2
+  display_name: "Entrepreneurship"
+  code: "ENTREP 1"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 5
+  semester: 2
+  display_name: "CoE Elective 1"
+  code: "CpE EL 2"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 5
+  semester: 2
+  display_name: "CoE Elective 3"
+  code: "CpE EL 3"
+  units: 4
+  program_courses:
+  - cpe               
+- year_level: 5
+  semester: 2
+  display_name: "Seminars and Field Trips"
+  code: "CpE 13"
+  units: 2
+  program_courses:
+  - cpe               
+- year_level: 5
+  semester: 2
+  display_name: "CoE Professional Proficency Course /n (Pre-board Exam)"
+  code: "CpE 18"
+  units: 3
+  program_courses:
+  - cpe               
+- year_level: 2
+  semester: 1
+  display_name: "Applied Engineering Graphics"
+  code: "DRAW 3"
+  units: 1
+  program_courses:
+    - ece
+- year_level: 2
+  semester: 2
+  display_name: "Orientation to Electronics Engineering"
+  code: "ENGG 0"
+  units: 1
+  program_courses:
+    - ece
+- year_level: 3
+  semester: 1
+  display_name: "Vector Analysis"
+  code: "MATH 24"
+  units: 3
+  program_courses:
+    - ece
+- year_level: 3
+  semester: 1
+  display_name: "Electronics Shop Theory and Practice"
+  code: "ECE SHOP 1"
+  units: 3
+  program_courses:
+    - ece
+- year_level: 3
+  semester: 2
+  display_name: "Advance Mathematics for ECE"
+  code: "MATH 28"
+  units: 3
+  program_courses:
+    - ece
+- year_level: 3
+  semester: 2
+  display_name: "Fundamentals of Materials Science & Engg."
+  code: "ME 3"
+  units: 3
+  program_courses:
+    - ece
+- year_level: 3
+  semester: 2
+  display_name: "Advance CAD - 3D"
+  code: "ES 8"
+  units: 3
+  program_courses:
+    - ece
+- year_level: 3
+  semester: 2
+  display_name: "Engineering Management"
+  code: "ES 10"
+  units: 3
+  program_courses:
+    - ece
+- year_level: 4
+  semester: 1
+  display_name: "Basic Thermodynamics"
+  code: "ES 11"
+  units: 3
+  program_courses:
+    - ece
+- year_level: 4
+  semester: 1
+  display_name: "Energy Conservation"
+  code: "EE 4"
+  units: 4
+  program_courses:
+    - ece
+- year_level: 4
+  semester: 1
+  display_name: "Numerical Methods"
+  code: "MATH 29"
+  units: 4
+  program_courses:
+    - ece
+- year_level: 4
+  semester: 1
+  display_name: "Electromagnetics"
+  code: "EE 2"
+  units: 3
+  program_courses:
+    - ece
+- year_level: 4
+  semester: 1
+  display_name: "Electronics 3"
+  code: "ECE 3E"
+  units: 4
+  program_courses:
+    - ece
+- year_level: 4
+  semester: 2
+  display_name: "Digital Communication"
+  code: "ECE 8"
+  units: 4
+  program_courses:
+    - ece
+- year_level: 4
+  semester: 2
+  display_name: "Engineering Economy"
+  code: "ES 9"
+  units: 3
+  program_courses:
+    - ece
+- year_level: 4
+  semester: 2
+  display_name: "Industrial Electronics"
+  code: "ECE 9"
+  units: 4
+  program_courses:
+    - ece
+- year_level: 4
+  semester: 2
+  display_name: "Safety Management"
+  code: "ES 12"
+  units: 2
+  program_courses:
+    - ece
+- year_level: 4
+  semester: 2
+  display_name: "Signals, Spectra & Signal Processing"
+  code: "ECE 6"
+  units: 4
+  program_courses:
+    - ece
+- year_level: 4
+  semester: 2
+  display_name: "ECE Computer Applications"
+  code: "ECE 4"
+  units: 3
+  program_courses:
+    - ece
+- year_level: 4
+  semester: 2
+  display_name: "ECE Proj Study/Res 1 (Methods of Research)"
+  code: "RES 1"
+  units: 3
+  program_courses:
+    - ece
+- year_level: 5
+  semester: 1
+  display_name: "Transmission Media & Antennae Systems"
+  code: "ECE 11"
+  units: 4
+  program_courses:
+    - ece
+- year_level: 5
+  semester: 1
+  display_name: "Feedback And Control Systems"
+  code: "ECE 10"
+  units: 4
+  program_courses:
+    - ece
+- year_level: 5 
+  semester: 1
+  display_name: "Instrumentation and Controls"
+  code: "ECE 13"
+  units: 4
+  program_courses:
+    - ece
+- year_level: 5
+  semester: 1
+  display_name: "Elective Course 1"
+  code: "ECE EL 1"
+  units: 4
+  program_courses:
+    - ece
+- year_level: 5
+  semester: 1
+  display_name: "Elective Course 2"
+  code: "ECE EL 2"
+  units: 4
+  program_courses:
+    - ece
+- year_level: 5
+  semester: 1
+  display_name: "Data Communication"
+  code: "ECE 12"
+  units: 3
+  program_courses:
+    - ece
+- year_level: 5
+  semester: 1
+  display_name: "Research 2 (Project Implementation & Thesis)"
+  code: "RES 2"
+  units:
+  program_courses:
+    - ece
+- year_level: 5
+  semester: 2
+  display_name: "Microprocessor System"
+  code: "CpE 9"
+  units: 4
+  program_courses:
+    - ece
+- year_level: 5
+  semester: 2
+  display_name: "Broadcast Engineering & Acoustics"
+  code: "ECE 14"
+  units: 4
+  program_courses:
+    - ece
+- year_level: 5
+  semester: 2
+  display_name: 'Communication Theory 5'
+  code: "ECE 15"
+  units: 4
+  program_courses:
+    - ece
+- year_level: 5
+  semester: 2
+  display_name: "ECE Laws, Contracts and Ethics"
+  code: "ECE 16"
+  units: 3
+  program_courses:
+    - ece
+- year_level: 5
+  semester: 2
+  display_name: "Seminars/Field Trips/Plants Inspection"
+  code: "ECE 17"
+  units: 2
+  program_courses:
+    - ece
+- year_level: 5
+  semester: 2
+  display_name: "Elective Course 3"
+  code: "ECE EL 3"
+  units: 4
+  program_courses:
+    - ece
+- year_level: 5
+  semester: 2
+  display_name: "Elective Course 4"
+  code: "ECE EL 4"
+  units: 4
+  program_courses:
+    - ece
+- year_level: 5
+  semester: 2
+  display_name: "ECE Proficiency (Pre-Board Exam)"
+  code: "ECE 18"
+  units: 3
+  program_courses:
+    - ece
+- year_level: 2
+  semester: 2
+  display_name: "Orientation to Electrical Engineering"
+  code: "ENGG 0"
+  units: 1
+  program_courses:
+    - ee
+- year_level: 2
+  semester: 1
+  display_name: "Applied Engineering Graphics (EE)"
+  code: "DRAW 3"
+  units: 1
+  program_courses:
+    - ee
+- year_level: 3
+  semester: 1
+  display_name: "Advanced CAD - 3D"
+  code: "ES 4"
+  units: 3
+  program_courses:
+    - ee  
+- year_level: 3 
+  semester: 1
+  display_name: "Basic Thermodynamics"
+  code: "ES 11"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 3 
+  semester: 1
+  display_name: "Electrical Shop Theory And Practice"
+  code: "EE Shop 1"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 3
+  semester: 1
+  display_name: "Electromagnetics"
+  code: "EE 2"
+  units: 3
+  program_courses:
+    - ee       
+- year_level: 3
+  semester: 2
+  display_name: "Advanced Mathematics for EE"
+  code: "MATH 28"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 3
+  semester: 2
+  display_name: "Fundamental of Material Science & Eng'g"
+  code: "ES 7A"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 4
+  semester: 1
+  display_name: "Electrical Circuits 3"
+  code: "EE 5"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 4
+  semester: 1
+  display_name: "DC Machinery"
+  code: "EE 6A"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 4
+  semester: 1
+  display_name: "Control System Analysis"
+  code: "EE 15"
+  units: 4
+  program_courses:
+    - ee
+- year_level: 4
+  semester: 1
+  display_name: "Electomechanical Energy Conservation"
+  code: "EE 4"
+  units: 4
+  program_courses:
+    - ee
+- year_level: 4
+  semester: 1
+  display_name: "Numerical Methods with Computer Application"
+  code: "EE 6B"
+  program_courses:
+    - ee
+- year_level: 4
+  semester: 2
+  display_name: "AC Machinery"
+  code: "EE 6B"
+  units: 4
+  program_courses:
+    - ee
+- year_level: 4
+  semester: 2
+  display_name: "AC Apparatus And Devices"
+  code: "EE 6C"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 4
+  semester: 1
+  display_name: "Electrical System And Design"
+  code: "EE 7"
+  units: 4
+  program_courses:
+    - ee
+- year_level: 4
+  semester: 2
+  display_name: "Illumination Engineering Design"
+  code: "EE 16"
+  units: 4
+  program_courses:
+    - ee
+- year_level: 4
+  semester: 2
+  display_name: "Industrial Electronics"
+  code: "ECE 9"
+  units: 4
+  program_courses:
+    - ee
+- year_level: 4
+  semester: 2
+  display_name: "EE Proj Study/Res 1 (Methods Of Research)"
+  code: "RES 1"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 5
+  semester: 1
+  display_name: "Fluid Mechanics"
+  code: "ES 6"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 5
+  semester: 1
+  display_name: "EE Law, Contracts and Ethics"
+  code: "EE 11"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 5
+  semester: 1
+  display_name: "Electrical Transmision & Distribution System"
+  code: "EE 8"
+  units: 4
+  program_courses:
+    - ee                            
+- year_level: 5
+  semester: 1
+  display_name: "Electrical Equipment Operation & Maintenance"
+  code: "EE 9"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 5
+  semester: 1
+  display_name: "Instrumentations and Control"
+  code: "ECE 13"
+  units: 3
+  program_courses:
+    - ee  
+- year_level: 5
+  semester: 1
+  display_name: "Elective Course 1"
+  code: "EE EL 1"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 5 
+  semester: 1
+  display_name: "Elective Course 2"
+  code: "EE EL 2"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 5
+  semester: 1
+  display_name: "EE Research 2/(Project Implementation & Thesis"
+  code: "RES 2"
+  units: 3
+  program_courses:
+    - ee 
+- year_level: 5
+  semester: 2
+  display_name: "Power System Analysis And Design"
+  code: "EE 10"
+  units: 4
+  program_courses:
+    - ee
+- year_level: 5
+  semester: 2
+  display_name: "Power Plant Engineering"
+  code: "EE 12"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 5
+  semester: 2
+  display_name: "Information Technology"
+  code: "IT"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 5
+  semester: 2
+  display_name: "EE Safety"
+  code: "EE 15"
+  units: 2
+  program_courses:
+    - ee             
+- year_level: 5
+  semester: 1
+  display_name: "Seminars/Field Trips/Plant Inspection"
+  code: "EE 13"
+  units: 1
+  program_courses:
+    - ee
+- year_level: 5
+  semester: 2
+  display_name: "Elective Course 3"
+  code: "EE EL 3"
+  units: 3
+  program_courses:
+    - ee    
+- year_level: 5
+  semester: 2
+  display_name: "Elective Course 4"
+  code: "EE EL 4"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 5
+  semester: 2 
+  display_name: "EE Proficiency Course /n (Pre-Board Exam)"
+  code: "EE 14"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 5
+  semester: 2
+  display_name: "Microprocessor System"
+  code: "Cpe 9"
+  units: 4
+  program_courses:
+    - ee 
+- year_level: 3
+  semester: 2
+  display_name: "Environmental Engineering"
+  code: "ES 4"
+  units: 3
+  program_courses: 
+    - ee
+- year_level: 4
+  semester: 1
+  display_name: "Engineering Management"
+  code: "ES 10"
+  units: 3
+  program_courses:
+    - ee
+- year_level: 4
+  semester: 2
+  display_name: "Logic Circuits & Switching Theory"
+  code: "ECE 3"
+  units: 4
+  program_courses:
+    - ee 
+- year_level: 4 
+  semester: 1
+  display_name: "Engineering Economy"
+  code: "ES 9"
+  units: 3
+  program_courses: 
+    - ee
+- year_level: 2
+  semester: 1 
+  display_name: "Applied Engineering Graphics (ME)"
+  code: "DRAW 3"
+  units: 1
+  program_courses:
+    - me
+- year_level: 2
+  semester: 2
+  display_name: "Orientation to Mechanical Engineering"
+  code: "ENGG 0"
+  units: 1
+  program_courses:
+    - me
+- year_level: 3
+  semester: 1
+  display_name: "Thermodynamics"
+  code: "ES 11"
+  units: 3
+  program_courses:
+    - me
+- year_level: 3
+  semester: 2
+  display_name: "Engineering Management"
+  code: "ES 10"
+  units: 3
+  program_courses:
+    - me
+- year_level: 3
+  semester: 1
+  display_name: "Environmental Engineering"
+  code: "EM"
+  units: 3
+  program_courses:
+    - me
+- year_level: 3
+  semester: 1
+  display_name: "Workshop Theory and Practice" 
+  code: "ME SHOP 1"
+  units: 3
+  program_courses:
+    - me
+- year_level: 3
+  semester: 1
+  display_name: "Advance CAD-3D"
+  code: "ES 8"
+  units: 3
+  program_courses:
+    - me
+- year_level: 3
+  semester: 1
+  display_name: "Basic Electrical Engineering"
+  code: "EE 15"
+  units: 3
+  program_courses:
+    - me
+- year_level: 3 
+  semester: 2
+  display_name: "Advance Mathematics for ME"
+  code: "MATH 28"
+  units: 3
+  program_courses:
+    - me
+- year_level: 3
+  semester: 2
+  display_name: "Fluid Mechanics"
+  code: "ES 6"
+  units: 3
+  program_courses:
+    - me
+- year_level: 3
+  semester: 2
+  display_name: "Machine Elements"
+  code: "ME 1"
+  units: 3
+  program_courses: 
+    - me
+- year_level: 3
+  semester: 2
+  display_name: "AC and DC Machinery"
+  code: "EE 6"
+  units: 4
+  program_courses:
+    - me
+- year_level: 4
+  semester: 1
+  display_name: "Numerical Methods"
+  code: "MATH 29"
+  units: 4
+  program_courses:
+    - me
+- year_level: 4
+  semester: 1
+  display_name: "ME Laboratory"
+  code: "ME 10"
+  units: 2
+  program_courses:
+    - me
+- year_level: 4
+  semester: 1
+  display_name: "Fluid Machinery"
+  code: "ME 13"
+  units: 3
+  program_courses:
+    - me
+- year_level: 4
+  semester: 1
+  display_name: "Engineering Economy"
+  code: "ES 9"
+  units: 3
+  program_courses:
+    - me
+- year_level: 4
+  semester: 1
+  display_name: "Heat Transfer"
+  code: "ME 6"
+  units: 3
+  program_courses:
+    - me
+- year_level: 4
+  semester: 1
+  display_name: "Machine Elements 2"
+  code: "ME 2"
+  units: 3
+  program_courses:
+    - me
+- year_level: 4
+  semester: 1
+  display_name: "Basic Electronics"
+  code: "ECE 19"
+  units: 3
+  program_courses:
+    - me
+- year_level: 4
+  semester: 1
+  display_name: "ME Elective 1"
+  code: "ME EL 1"
+  units: 4
+  program_courses:
+    - me
+- year_level: 4
+  semester: 2
+  display_name: "Machine Design"
+  code: "ME 4"
+  units: 4
+  program_courses:
+    - me
+- year_level: 4
+  semester: 2
+  display_name: "Combusion Engineering"
+  code: "ME 7"
+  units: 3
+  program_courses:
+    - me
+- year_level: 4
+  semester: 2
+  display_name: "Refregeration System"
+  code: "ME 8"
+  units: 3
+  program_courses:
+    - me
+- year_level: 4
+  semester: 2
+  display_name: "ME Laboratory 2"
+  code: "ME 11"
+  units: 2
+  program_courses:
+    - me
+- year_level: 4
+  semester: 2
+  display_name: "Material Engineering and Testing"
+  code: "ES 7"
+  units: 4
+  program_courses:
+    - me
+- year_level: 4
+  semester: 2
+  display_name: "ME Elective 2"
+  code: "ME EL 2"
+  units: 4
+  program_courses:
+    - me
+- year_level: 4
+  semester: 2
+  display_name: "ME Elective 3"
+  code: "ME EL 3"
+  units: 4
+  program_courses:
+    - me
+- year_level: 4
+  semester: 2
+  display_name: "ME Project Study/Res (Methods of Research"
+  code: "RES 1"
+  units: 3
+  program_courses:
+    - me
+- year_level: 5
+  semester: 1
+  display_name: "Machine Design 2"
+  code: "ME 22"
+  units: 3
+  program_courses:
+    - me
+- year_level: 5
+  semester: 1
+  display_name: "ME Laboratory 3"
+  code: "ME 12"
+  units: 2
+  program_courses:
+    - me
+- year_level: 5
+  semester: 1
+  display_name: "Air Conditioning and Ventilation"
+  code: "ME 9"
+  units: 4
+  program_courses:
+    - me
+- year_level: 5
+  semester: 1
+  display_name: "Industrial Process"
+  code: "ME 19"
+  units: 3
+  program_courses:
+    - me
+- year_level: 5
+  semester: 1
+  display_name: "ME elective 4"
+  code: "ME EL 4"
+  units: 4
+  program_courses:
+    - me
+- year_level: 5
+  semester: 1
+  display_name: "Powerplant Engineering"
+  code: "ME 16"
+  units: 4
+  program_courses:
+    - me
+- year_level: 5
+  semester: 1
+  display_name: "ME Proj Study/Res 2(Project Implementation)"
+  code: "RES 2"
+  units: 2
+  program_courses:
+    - me
+- year_level: 5
+  semester: 2
+  display_name: "ME Professional Competency /n (Pre-Board Exam) "
+  code: "ME 22"
+  units: 3
+  program_courses:
+    - me
+- year_level: 5
+  semester: 2
+  display_name: "Powerplant Engineering(Design)"
+  code: "ME 17"
+  units: 2
+  program_courses:
+    - me
+- year_level: 5
+  semester: 2
+  display_name: "Industrial Plant Engineering & Design"
+  code: "ME 21"
+  units: 4
+  program_courses:
+    - me	
+- year_level: 5
+  semester: 2
+  display_name: "Vibrational Engineering"
+  code: "ME 14"
+  units: 2
+  program_courses:
+    - me
+- year_level: 5
+  semester: 2
+  display_name: "Industrial Plant Visit & ME Standards"
+  code: "ME 20"
+  units: 3
+  program_courses:
+    - me
+- year_level: 5
+  semester: 2
+  display_name: "Safety Engineering For ME"
+  code: "ME 18"
+  units: 2
+  program_courses:
+    - me
+- year_level: 5
+  semester: 2
+  display_name: "ME Laws,Ethics Code & Standards"
+  code: "ME 15"
+  units: 3
+  program_courses:
+    - me
+- year_level: 5
+  semester: 2
+  display_name: "Instrumentation and Control Engineering"
+  code: "ECE 13"
+  units: 3
+  program_courses:
+    - me

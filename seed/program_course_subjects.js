@@ -40,6 +40,8 @@ async function initializeSubjects() {
         units: data.units,
       }).then((subject) => {
         addProgramCourseSubjects(data.program_courses, subject.id);
+      }).catch((err) => {
+        console.log(">> Error while adding Subjects", err.parent.sqlMessage);
       });
     });
   } catch (error) {
