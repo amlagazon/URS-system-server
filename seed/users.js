@@ -19,40 +19,6 @@ async function seed() {
     );
     User.create(
       {
-        first_name: "Aaron Louie",
-        last_name: "Lagazon",
-        email: "aaron.louie@gmail.com",
-        password: bcrypt.hashSync("12345678", 8),
-        user_type_id: 1,
-        student: {
-          gwa: 1.2,
-          student_number: "123456",
-          program_id: 1,
-          status: "approved",
-          subject_status: "pending",
-        },
-      },
-      { include: { model: Student } }
-    );
-    User.create(
-      {
-        first_name: "Maureen",
-        last_name: "Batacan",
-        email: "mau.b@gmail.com",
-        password: bcrypt.hashSync("11111", 8),
-        user_type_id: 1,
-        student: {
-          gwa: 1.2,
-          student_number: "123456",
-          program_id: 1,
-          status: "rejected",
-          subject_status: "rejected",
-        },
-      },
-      { include: { model: Student } }
-    );
-    User.create(
-      {
         first_name: "Jose",
         last_name: "Rizal",
         email: "jose.rizal@gmail.com",
