@@ -98,6 +98,7 @@ exports.create = (req, res) => {
       Subject.create(req.body)
         .then((subject) => {
           addProgramCourseSubjects(req.body.program_courses_codes, subject.id);
+          global.io.emit("add_subject", subject);
           return res.status(200).send({ success: true });
         })
         .catch((err) => {
