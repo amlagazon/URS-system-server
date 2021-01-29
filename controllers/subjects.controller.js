@@ -5,6 +5,7 @@ const StudentSubject = db.studentSubject;
 const Student = db.student;
 const ProgramCourse = db.programCourse;
 const Sequelize = require("sequelize");
+const subjects = require("../models/subjects");
 function getAll(req, res, where, takenSubjects) {
   if (req.query.program_course) {
     ProgramCourse.findOne({
@@ -36,10 +37,29 @@ function getAll(req, res, where, takenSubjects) {
     });
   }
 }
+
 function filterByTakenSubjects(subjects, takenSubjects) {
   if (takenSubjects.lenght == 0) return subjects;
   return subjects.filter((subject) => !takenSubjects.includes(subject.code));
 }
+
+function addProgramCourseSubjects(programCourseNames, subjectId) {
+  return ProgramCourse.findAll({ where: { name: programCourseNames } })
+    .then((programCourses) => {
+      if (programCourses.size == 0) return null;
+      return Subject.findByPk(subjectId).then((subject) => {
+        if (!subject) return null;
+        programCourses.map((programCourse) => {
+          programCourse.addSubjects(subject);
+          return subject;
+        });
+      });
+    })
+    .catch((err) => {
+      console.log(">> Error while adding Subject to ProgramCourse: ", err);
+    });
+}
+
 exports.getall = (req, res) => {
   let where = {};
   if (req.query.semester) {
@@ -64,4 +84,26 @@ exports.getall = (req, res) => {
   } else {
     getAll(req, res, where, []);
   }
+};
+
+exports.create = (req, res) => {
+  console.log("Creating subject");
+  console.log(req.body);
+  Subject.findAll({ where: { code: req.body.code } }).then((subjects) => {
+    if (subjects.length > 0) {
+      console.log(subjects);
+      res.status(404).send({ message: "Subect code already exists" });
+      return;
+    } else {
+      Subject.create(req.body)
+        .then((subject) => {
+          addProgramCourseSubjects(req.body.program_courses_codes, subject.id);
+          return res.status(200).send({ success: true });
+        })
+        .catch((err) => {
+          console.log(">> Error while adding Subjects", err);
+          return res.status(404).send({ success: false });
+        });
+    }
+  });
 };
