@@ -13,7 +13,7 @@ var bcrypt = require("bcryptjs");
 
 exports.getall = (req, res) => {
   var join = [
-    { model: Student },
+    { model: Student, include: { model: ProgramCourse } },
     { model: UserType },
     {
       model: Evaluator,
